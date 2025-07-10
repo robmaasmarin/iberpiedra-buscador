@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+  <script src="./scripts/buttonsandforms.js"></script>
+  <script src="./scripts/search.js"></script>
+  <script src="./scripts/prueba.js"></script>
+  <script src="./scripts/cambioprecio.js"></script>
+  <script src="./scripts/addproduct.js"></script>
+  <script src="./scripts/eliminarProdu.js"></script>
+
+  <title>IBERPIEDRA - CATÁLOGO</title>
+  <link rel="icon" href="./img/icon.png">
+
+
+
+</head>
+
+<body>
+  <div class="containercolumnas">
+    <div class="columna1">
+      <div class="menulateralfijado">
+        <input type="checkbox" id="toggle" hidden>
+        <label for="toggle" class="hamburger" onclick="mostrarBotones()">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="x-extra"></span>
+        </label>
+        <div class="botones">
+          <button class="buttonMod" onclick="toggleFormulario('modificar')">MODIFICAR PRECIO</button><br>
+          <button class="buttonAdd" onclick="toggleFormulario('engadir')">AÑADIR PRODUCTO</button>
+          <button class="buttonDel" onclick="toggleFormulario('eliminar')">ELIMINAR PRODUCTO</button>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="columna2">
+      <div class="logo-sticky">
+        <img class="logo" src="./img/logo.png" alt="">
+      </div>
+      <div class="modificar">
+        <input class="miprod" id="inputIdProducto" type="text" placeholder="Código de producto...">
+
+        <input class="mipre" id="inputNuevoPrecio" type="text" placeholder="Nuevo Precio sin IVA...">
+        <button class="cambiar" id="btnCambiarPrecio">APLICAR CAMBIO</button>
+      </div>
+      <div class="engadir">
+        <form onsubmit="return false;">
+          <label for="pname">NOMBRE PRODUCTO</label>
+          <input class="inputadd" id="pname" type="text" placeholder="Producto..."><br>
+          <label for="pref">CÓDIGO</label>
+          <input class="inputadd" id="pcod" type="text" placeholder="Código..."><br>
+          <label for="pref">FAMILIA</label>
+          <input class="inputadd" id="pfam" type="text" placeholder="Familia..."><br>
+          <label for="pprecio">PRECIO (SIN IVA)</label>
+          <input class="inputadd" id="pprecio" type="text">
+          <button class="cambiar" onclick="agregarProducto()">AÑADIR PRODUCTO</button>
+        </form>
+      </div>
+      <div class="eliminar" id="eliminar">
+        <input class="inputadd" type="text" id="miproducto" placeholder="Código de producto...">
+        <button class="cambiar" id="btnDelete" onclick="eliminarProducto()">ELIMINAR PRODUCTO</button>
+      </div>
+    </div>
+    <div class="columna3">
+      <div class="searchbar">
+        <!-- <img src="./img/search.svg" alt=""> -->
+        <input class="miinput" type="text" placeholder="BUSCAR" id="inputReferencia" inputmode="search">
+        <button class="cambiar" onclick="buscar()">BUSCAR</button>
+        <button class="cambiar" onclick="resetBusqueda()">RESET</button>
+      </div>
+
+      <div id="mostrarProducto" class="mostrarProducto"></div>
+    </div>
+  </div>
+
+  <footer class="mifooter" id="mifooter">
+
+
+    <div class="columna1footer"></div>
+    <div class="columna2footer">
+      <img src="./img/angles-up-solid.png" alt="" style="height: 45px;" class="footer-image" onclick="scrollToTop()">
+    </div>
+    <div class="columna3footer"></div>
+
+
+
+
+  </footer>
+
+
+
+
+
+  <script>
+    //script para llamar a la búsqueda si pulsamos enter en lugar de pulsar el botón
+    const textInput = document.getElementById('inputReferencia');
+    textInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        buscar();
+      }
+    });
+  </script>
+  <script>
+
+  </script>
+
+  <script>
+    //SCRIPT para volver al inicio de la página (parte superior)
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // desplazamiento suave
+      });
+    }
+  </script>
+
+</body>
+
+</html>

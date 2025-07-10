@@ -1,0 +1,338 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+body {
+  background-color: #f2f9f1;
+  color: #222;
+}
+
+.containercolumnas {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  align-items: stretch;
+}
+
+
+.columna1 {
+  width: 15%;
+  padding: 20px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background-color: #f2f9f1; /* opcional para mantener color */
+  z-index: 100;
+}
+
+.menulateralfijado {
+    
+    top: 0;
+      z-index: 100;
+      background-color: #f2f9f1; /* mismo fondo que el body */
+  padding-bottom: 20px;
+
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 40px;
+  height: 30px;
+  margin: 40px auto 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.hamburger span,
+.hamburger .x-extra {
+  height: 2px;
+  background-color: #333;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.hamburger .x-extra {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: rotate(-45deg);
+  opacity: 0;
+}
+
+#toggle:checked + .hamburger span:nth-child(1),
+#toggle:checked + .hamburger span:nth-child(3) {
+  opacity: 0;
+}
+
+#toggle:checked + .hamburger span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+#toggle:checked + .hamburger .x-extra {
+  opacity: 1;
+}
+
+.botones {
+  margin-top: 100px;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.4s ease;
+}
+
+.botones.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Botones con más contraste y texto claro */
+.buttonMod, .buttonAdd, .cambiar, .buttonDel {
+  background-color: #222;      /* Fondo oscuro */
+  border: 1px solid #000;      /* Borde negro */
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin: 10px 0;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #fff;                 /* Texto blanco */
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.buttonMod:hover, .buttonAdd:hover, .cambiar:hover {
+  background-color: #444;      /* Fondo un poco más claro */
+  color: #e0e0e0;
+  border-color: #333;
+}
+
+/* --- MODIFICACIONES PARA MÁS CONTRASTE EN COLUMNA 2 --- */
+
+.columna2 {
+  width: 45%;
+  background-color: #fff;
+  padding: 0 40px;
+  border-right: 1px solid #eee;
+
+}
+
+
+
+/* Inputs y labels dentro de columna2 con mayor contraste */
+.columna2 .miprod,
+.columna2 .mipre,
+.columna2 .inputadd {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #444;      /* Borde más oscuro */
+  border-radius: 6px;
+  margin-top: 12px;
+  background-color: #fff;
+  color: #111;                 /* Texto más oscuro */
+  font-weight: 600;
+  transition: border-color 0.3s ease;
+}
+
+.columna2 .miprod::placeholder,
+.columna2 .mipre::placeholder,
+.columna2 .inputadd::placeholder {
+  color: #666;
+  font-weight: 500;
+}
+
+.columna2 label {
+  display: block;
+  margin-top: 20px;
+  color: #222;                 /* Texto más oscuro */
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Botones dentro de columna2: más contraste */
+.columna2 .cambiar {
+  margin-top: 24px;
+  background-color: #111;      /* Más oscuro */
+  border: 2px solid #000;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  width: 100%;
+}
+
+.columna2 .cambiar:hover {
+  background-color: #333;
+  border-color: #222;
+  color: #eee;
+}
+
+.columna2 .cambiar:active {
+  background-color: #000;
+}
+
+/* Fin modificaciones columna 2 */
+
+.modificar,
+.engadir,
+.eliminar {
+  display: none; /* ocultos por defecto */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  margin-top: 30px;
+}
+
+.modificar.visible,
+.engadir.visible,
+.eliminar.visible {
+  display: block; /* mostrarlos al volverse visibles */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.columna3 {
+  width: 40%;
+  padding: 40px;
+  background-color: #f2f9f1;
+}
+
+.searchbar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.miinput {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-weight: 1000;
+  font-size: large;
+}
+
+.mostrarProducto {
+  margin-top: 40px;
+}
+
+.producto-listado {
+  cursor: pointer;
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s;
+    font-weight: 1000;
+  font-size: large;
+}
+
+.producto-listado:hover {
+  background-color: #a7b99e;
+}
+
+.detalle-producto {
+  margin-top: 10px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-left: 4px solid #ccc;
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease;
+  font-size: larger;
+  font-family: 'Times New Roman', Times, serif !important;
+  
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .containercolumnas {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .columna1, .columna2, .columna3 {
+    width: 100%;
+    padding: 20px;
+    height: auto; /* <-- AÑADE ESTO */
+    min-height: auto; /* <-- Y ESTO */
+  }
+
+  .columna2, .columna3 {
+    overflow: visible; /* Por si acaso */
+  }
+}
+
+
+
+
+.detalle-producto * {
+  font-family: 'Lora', serif !important;
+  font-size: 18px;
+}
+
+.logo-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+  padding: 16px;
+  border-bottom: 1px solid #ccc;
+  min-height: 80px;
+  margin-top: 30px;
+}
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
+    padding: 0;
+    margin: 0;
+    
+  }
+
+  .footer-image {
+    max-height: 80%; /* optional: keeps image size under control */
+    cursor: pointer;
+    margin-top: 3%;
+    
+  }
+
+
+  .columna1footer {
+  width: 15%;
+ 
+  background-color: #f2f9f1; /* opcional para mantener color */
+ 
+}
+
+.columna2footer {
+  width: 45%;
+  
+  padding: 0%;
+  height: 100%;
+  text-align: center;
+
+
+}
+.columna3footer {
+  width: 40%;
+  padding: 40px;
+  background-color: #f2f9f1;
+}

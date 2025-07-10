@@ -1,0 +1,705 @@
+Necesito crear una base de datos en mysqlworkbench con la siguiente info:
+El nombre de las columnas:
+Familia
+Código
+Descripción
+PVP
+PVP C/IVA
+
+los datos:
+
+AC 	204MO60402	Morisca Oro 60x40x1,5-2,5cm, m2	28,93	35,01
+AC 	204MO60403	Morisca Oro 60x40x2-3cm, m2	31,41	38,01
+AC 	204MO40202	Morisca Oro 40x20x1,5-2 cm, m2	28,93	35,01
+AC 	204MO10080Z	Arenisca Morisca 100x80x2,5-4cm, cantos cizallados, m2	30,99	37,50
+AC 	600/5           	Arenisca Ocre, 60x90x2,5/4cm, cantos manuales, m2	0,00	0,00
+AC 	601/2	Arenisca Sahara 100x35x3cm, canto largo romo, ml	0,00	0,00
+AC 	602	Arenisca Negra Teide 60x90x3,5/4cm, cantos manuales, m2	32,15	38,90
+AD 	250	Adoquín rústico Granito Gris 10x10x10cm, m2	23,14	28,00
+AD 	250U            	Adoquín rústico Granito Gris 10x10x10cm, ud	0,41	0,50
+AD 	250/1           	Adoquín rústico Granito Moreno 10x10x10cm , m2	24,79	30,00
+AD 	250/1U          	Adoquín rústico Granito Moreno 10x10x10cm, ud	0,45	0,54
+AD 	250G10105	Adoquín rústico Granito Gris 10x10x5cm, m2	15,70	19,00
+AD 	250G10105U	Adoquín rústico Granito Gris 10x10x5cm, ud	0,35	0,42
+AD 	250M10105	Adoquín rústico Granito Moreno 10x10x5cm, m2	16,53	20,00
+AD 	250M10105U	Adoquín rústico Granito Moreno 10x10x5cm, ud	0,29	0,35
+AD 	250/4           	Adoquín rústico Granito Gris 20x10x10cm, m2	23,14	28,00
+AD 	250/4U          	Adoquín rústico Granito Gris 20x10x10cm, ud	0,83	1,00
+AD 	250/2           	Adoquín rústico Granito Moreno 20x10x10cm, m2	24,79	30,00
+AD 	250/2U          	Adoquín rústico Granito Moreno 20x10x10cm, ud	0,79	0,96
+AD 	250/3           	Adoquín rústico Granito Negro 10x10x10cm, m2	0,00	0,00
+AD 	250/3U          	Adoquín rústico Granito Negro 10x10x10cm, ud	0,60	0,73
+AD 	250/5           	Adoquín rústico Granito Negro 20x10x10cm, m2	0,00	0,00
+AD 	250/5U          	Adoquín rústico Granito Negro 20x10x10cm, ud	1,00	1,21
+AD 	250M79	Adoquín rústico Granito Moreno 8x8x8cm, m2	19,01	23,00
+AD 	250M79U	Adoquín rústico Granito Moreno 8x8x8cm, ud	0,25	0,30
+AD 	250G79	Adoquín rústico Granito Gris 8x8x8cm , m2	16,53	20,00
+AD 	250G79U	Adoquín rústico Granito Gris 8x8x8cm , ud	0,25	0,30
+AD 	250G46	Adoquín rústico Granito Gris 5x5x5cm , m2	14,88	18,00
+AD 	250G46U	Adoquín rústico Granito Gris 5x5x5cm , ud	0,12	0,15
+AD 	250M46	Adoquín rústico Granito Moreno 5x5x5cm , m2	14,88	18,00
+AD 	250M46U	Adoquín rústico Granito Moreno 5x5x5cm , ud	0,10	0,12
+AD 	251M20105	Adoquin granito moreno 20x10x5cm c/ 1 cara abujardada, m2	29,75	36,00
+AD 	251M20105U	Adoquin granito moreno 20x10x5cm c/ 1 cara abujardada, ud	0,74	0,90
+AD 	251M10105	Adoquin granito moreno 10x10x5cm c/ 1 cara abujardada, m2	26,45	32,00
+AD 	251M10105U	Adoquin granito moreno 10x10x5cm c/ 1 cara abujardada, ud	0,41	0,50
+AD 	250BDM2	Bordillo rústico Granito Moreno LLx25x10cm, ml	18,18	22,00
+AD 	250BDM1	Bordillo rústico Granito Moreno LLx20x8cm, ml	18,18	22,00
+AD 	252BM208	Bordillo Granito Moreno abujardado LLx20x8cm, ml	14,88	18,00
+AD 	252BN156	Bordillo Granito Moreno abujardado LLx15x6cm, ml	12,40	15,00
+AD 	0	Bordillo Granito Moreno abujardado 50x10x10cm, ml	7,85	9,50
+AD 	0	Adoquín Basalto Anthracita 10x10x8cm, m2	32,23	39,00
+AD 	0	Adoquín Basalto Anthracita 10x10x8cm, ud	0,60	0,73
+AD 	0	Bordillo Basalto Anthracita 30x15x8cm, ud	2,89	3,50
+AD 	255G4020	Perpiaño granito gris Lx40x20cm, ml	26,45	32,00
+AD 	255G4040	Perpiaño granito gris Lx40x40cm, ml	49,59	60,00
+AD 	260VB57	Adoquin rustico caliza 5x5x5cm	0,00	0,00
+BA	CH100	Horno leña Ø ext. 100cm	549,59	665,00
+BA	CH100/1	Horno leña Ø ext. 100cm, acabado corcho	661,16	800,00
+BA	CH120	Horno leña Ø ext. 120cm	632,23	765,00
+BA	CH120/1	Horno leña Ø ext. 120cm, acabado corcho	739,67	895,00
+BA	HLR100	Horno leña s/ rematar diam. ext. 100cm, ud	355,37	430,00
+BA	HLR120	Horno leña s/ rematar diam. ext. 120cm, ud	380,17	460,01
+BA	HLR100P	Horno leña s/ rematar c/panel frontal diam. ext. 100cm, ud	355,37	430,00
+BA	HLR110P	Horno leña s/ rematar c/panel frontal diam. ext. 110cm, ud	380,17	460,01
+BA	HLR120P	Horno leña s/ rematar c/panel frontal diam. ext. 120cm, ud	380,17	460,01
+BA	CUP80	Cúpula Barro para horno, Ø 80cm	132,23	160,00
+BA	CUP90	Cúpula Barro para horno, Ø 90cm	0,00	0,00
+BA	CUP100	Cúpula Barro para horno, Ø 100cm	173,55	210,00
+BA	0	Puerta hierro 35cm para horno, ud	50,00	60,50
+BA	0	Puerta hierro 40cm para horno, ud	49,59	60,00
+BA	0	Puerta hierro 45cm para horno, ud	53,72	65,00
+BA	0	Puerta hierro 50cm para horno, ud	57,85	70,00
+BA	0	Puerta en fundición para horno, ud	165,29	200,00
+BA	0	Salida humo inox c/registro, ud	61,98	75,00
+BA	0	Conjunto pala + rastrillo hierro, ud	24,79	30,00
+BA	0	Conjunto pala, cepillo, gancho y rastrillo inox, ud	61,98	75,00
+BA	0	Termómetro con baina 40cm, ud	37,19	45,00
+BA	0	Termómetro 5cm, ud	16,53	20,00
+BA	0	Termómetro para puerta, ud	14,88	18,00
+BA	0	Conjunto puerta inox  42,5x31,5cm + salida humo inox, ud	95,04	115,00
+BA 	BAP82H	Parrilla hierro 82x48cm	24,79	30,00
+BA	BAP82I	Parrilla inox 82x48cm	66,12	80,01
+BA 	BAP80H	Parrilla hierro 80x38cm	16,53	20,00
+BA 	BAP60H	Parrilla hierro 60x38cm	14,88	18,00
+BA 	BAC60H	Cenicero hierro 60x38cm	12,40	15,00
+BA 	BAC80H	Cenicero hierro 80x38cm	16,53	20,00
+BA 	BAC60I	Cenicero inox 60x38cm	0,00	0,00
+BA 	BAC80I	Cenicero inox 80x38cm	30,00	36,30
+BA 	BAP60I	Parrila acero inox 60x38cm	33,06	40,00
+BA 	BAP80I	Parrilla acero inox 80x38cm	45,46	55,01
+BA 	BAPL82I	Plancha acero inox, 82x48cm	74,38	90,00
+BA 	BAPL60I	Plancha acero inox, 60x38cm	41,32	50,00
+BA 	0	Plancha acero inox, 70x38cm	38,02	46,00
+BA 	BAPL80I	Plancha acero inox, 80x38cm	53,72	65,00
+BA	BAK60H3	Parrilla hierro 60x38cm, kit completo encastrar	49,59	60,00
+BA	BAK70H3	Parrilla hierro 70x38cm, kit completo encastrar	53,72	65,00
+BA	BAK80H3	Parrilla hierro 80x38cm, kit completo encastrar	66,12	80,01
+BA	BAK60I3	Parrilla inox 60x38cm, kit completo encastrar	99,17	120,00
+BA	BAK70I3	Parrilla inox 70x38cm, kit completo encastrar	111,57	135,00
+BA	BAK80I3	Parrilla inox 80x38cm, kit completo encastrar	132,23	160,00
+BA	BAK70H1	Parrilla hierro 70x40cm/75x40cm, kit completo cerrado	82,65	100,01
+BA	BAK70I1	Parrilla inox 70x40cm/75x40cm, kit completo cerrado	181,82	220,00
+
+
+
+BA	BAK80H1	Parrilla hierro 80x45cm, kit completo cerrado	99,17	120,00
+BA	BAK80I1	Parrilla inox 80x45cm, kit completo cerrado	231,41	280,01
+BA 	BG1116/1	Barbacoa granito c/mesado, parrilla 82x48 cm, ud CONTEM	1.157,03	1.400,01
+BA 	BG1116	Barbacoa granito, parrilla 82x48 cm, ud CONTEMPORANEO	991,74	1.200,01
+BA 	BG1117/1	Barbacoa granito c/mesado, parrilla 82x48 cm, ud TOSCANA	1.363,64	1.650,00
+BA 	BG1117	Barbacoa granito, parrilla 82x48 cm, ud TOSCANA	1.280,99	1.550,00
+BA 	BG1118/1	Barbacoa granito c/mesado lateral, ud CUBIC	1.322,31	1.600,00
+BA 	BG1119/3	Barbacoa granito c/ mesado lateral y horno, parrilla 82x48cm, 	2.479,33	2.999,99
+BA 	BF1103	Barbacoa prefabricada en marmolina, parrilla 60x38cm, ud	388,43	470,00
+BA 	BF1114	Barbacoa prefabricada marmolina, parrilla  80x38cm, ud	454,55	550,01
+BA	BF1051	Barbacoa prefabricada cemento refractario, parrilla 60x38cm, ud	0,00	0,00
+BA	BF1109F	Barbacoa prefabricada marmolina, parrilla  70x38cm, ud	396,70	480,01
+BA	BF1124	Barbacoa prefabricada marmolina c/horno , parrilla  60x38cm, ud	1.239,67	1.500,00
+BA	BF1607	Barbacoa prefabricada marmolina/ladrillo gris, parrilla 60x38cm, ud	578,51	700,00
+BA	BF1607B	Barbacoa prefabricada marmolina/ladrillo gris, parrilla 80x38cm, ud	702,48	850,00
+BA	BFRC01	Campana pequeña barbacoa pref. marmolina	70,25	85,00
+BA	BFRC02	Campana grande barbacoa pref. marmolina	74,38	90,00
+BA	BFR001	Aumento simple H30cm barbacoa pref. marmolina	20,66	25,00
+BA	BFR002	Araña / Sombrero barbacoa pref. Marmolina, ud	20,66	25,00
+BO 	103/5	Bolos Caliza Amarilla 150/300 mm en jaula, tn	0,00	0,00
+BO 	103/5U	Bolos Caliza Amarilla 150/300 mm, kg	0,00	0,00
+BO 	110/2           	Bolos Granito Moreno, 30/60mm, tn	180,00	217,80
+BO 	110/2U          	Bolos Granito Moreno, 30/60mm, kg	0,29	0,35
+BO 	110/3	Bolos Granito Moreno, 60/120mm, tn	180,00	217,80
+BO 	110/3U	Bolos Granito Moreno, 60/120mm, kg	0,29	0,35
+BO 	110/4	Bolos Granito Moreno, 120/200mm, tn	180,00	217,80
+BO 	110/4U	Bolos Granito Moreno, 120/200mm, kg	0,29	0,35
+BO 	110/6	Bolos Granito Moreno, 300/500mm, tn	220,00	266,20
+BO 	110/6U	Bolos Granito Moreno, 300/500mm, kg	0,33	0,40
+BO 	110/7	Bolos Granito Moreno, >500mm, tn	220,00	266,20
+BO 	110/7U	Bolos Granito Moreno, >500mm, kg	0,33	0,40
+BO 	110U	Bolo Granito grande / Bolo monte, ud	0,00	0,00
+BO 	101/3	Bolos Marmol Blanco Rosa 25/50mm, tn	180,00	217,80
+BO 	101/3U	Bolos Marmol Blanco Rosa, 25/50mm, kg	0,27	0,33
+BO 	101/3S	Bolos Marmol Blanco Rosa, 25/50mm, saco de 20 kg	5,79	7,01
+BO 	101/6	Bolos Marmol Blanco Rosa 100/150mm, tn	180,00	217,80
+BO 	101/6U	Bolos Mármol Blanco Rosa 100/150mm, kg	0,29	0,35
+BO 	101/7	Bolos Mármol Blanco Rosa 150/300mm, tn	190,00	229,90
+BO 	101/7U	Bolos Mármol Blanco Rosa 150/300mm, kg	0,29	0,35
+BO 	101/8	Bolos Mármol Blanco Rosa, >300mm, tn	190,00	229,90
+BO 	101/8U	Bolos Mármol Blanco Rosa, >300mm, kg	0,29	0,35
+BO 	102/2	Bolos Basalto Negro Anthracita 15/30mm, tn	200,00	242,00
+BO 	102/2S	Bolos Basalto Negro Anthracita 15/30mm, saco 20kg	6,61	8,00
+BO 	102/3	Bolos Basalto Negro Anthracita 30/60mm, tn	200,00	242,00
+BO 	102/3S	Bolos Basalto Negro Anthracita 30/60mm, saco 20kg	6,61	8,00
+BO 	102/4	Bolos Basalto Negro Anthracita 60/120mm, tn	200,00	242,00
+BO 	102/4S	Bolos Basalto Negro Anthracita 60/120mm, saco 20kg	6,61	8,00
+BO 	102/6	Bolos Basalto Negro Anthracita 150/300mm, tn	214,88	260,00
+BO 	102/6U	Bolos Basalto Negro Anthracita 150/300mm, kg	0,33	0,40
+BO 	102/6	Bolos Basalto Negro Anthracita +300mm, tn	214,88	260,00
+BO 	102/6U	Bolos Basalto Negro Anthracita +300mm, kg	0,33	0,40
+BO 	109/1           	Canto Rodado Blanco, Ø12/20 mm en big bag, tn	136,36	165,00
+BO 	109/1S	Canto Rodado Blanco, Ø12/20 mm, saco 20 Kg	4,96	6,00
+BO 	109/2	Canto Rodado Blanco, Ø20/25 mm, en bigbag, tn	136,36	165,00
+BO 	109/2S	Canto Rodado Blanco, Ø20/25 mm, saco 20 Kg	4,96	6,00
+BO 	109/3	Canto Rodado Blanco, Ø20/40 mm, bigbag, tn	136,36	165,00
+BO 	109/3S	Canto Rodado Blanco, Ø20/40 mm, saco 20 Kg	4,96	6,00
+BO 	109/4	Canto Rodado Blanco, Ø40/60 mm, bigbag, tn	136,36	165,00
+BO 	109/4S	Canto Rodado Blanco, Ø40/60 mm, saco 20 Kg	4,96	6,00
+BO 	109/5	Canto Rodado Blanco, Ø60/100 mm, bigbag, tn	136,36	165,00
+BO 	109/5S	Canto Rodado Blanco, Ø60/100 mm, saco 20 Kg	4,96	6,00
+BO 	109RD80120	Canto Rodado Blanco, Ø80/120 mm, bigbag, tn	0,00	0,00
+BO 	109RD100200	Canto Rodado Blanco, Ø100/200 mm, bigbag, tn	0,00	0,00
+BO 	109/7	Canto Rodado Blanco, Ø200/300 mm, bigbag, tn	0,00	0,00
+BO 	109/7U	Canto Rodado Blanco, Ø200/300 mm, kg	0,25	0,30
+BO 	104	Canto Rodado Negro Intenso,  Ø 6/12 mm, big bag, tn	239,67	290,00
+BO 	104S	Canto Rodado Negro Intenso,  Ø 6/12 mm, saco 20 kg	6,61	8,00
+BO 	104/1	Canto Rodado Negro Intenso,  Ø 12/18 mm, big bag, tn	239,67	290,00
+BO 	104/1S	Canto Rodado Negro Intenso,  Ø 12/18 mm, saco 20 Kg	6,61	8,00
+BO 	104/2	Canto Rodado Negro Intenso,  Ø 12/25 mm, big bag, tn	239,67	290,00
+BO 	104/2S	Canto Rodado Negro Intenso,  Ø 12/25 mm, saco 20 Kg	6,61	8,00
+BO 	104/3	Canto Rodado Negro Intenso,  Ø 20/40 mm, en big bag, tn	239,67	290,00
+BO 	104/3S	Canto Rodado Negro Intenso,  Ø 20/40 mm, saco 20 Kg	6,61	8,00
+BO 	104RD4060	Canto Rodado Negro Intenso,  Ø 40/60 mm, en big bag, tn	239,67	290,00
+BO 	104RD4060S	Canto Rodado Negro Intenso,  Ø 40/60 mm, saco 20 Kg	6,61	8,00
+BO 	104RD60100	Canto Rodado Negro Intenso,  Ø 60/100 mm,	239,67	290,00
+BO 	104RD60100S	Canto Rodado Negro Intenso,  Ø 60/100 mm, saco 20 Kg	6,61	8,00
+BO 	105/3	Canto Rodado Negro Antiguo, en big bag, tn	0,00	0,00
+BO 	105/3S	Canto Rodado Negro Antiguo, saco 20 kg	0,00	0,00
+BO 	106/2	Canto Rodado Rojo Alicante 12/20mm, en bigbag, tn	181,82	220,00
+BO 	106/2S	Canto Rodado Rojo Alicante 12/20mm, saco 20 kg	6,61	8,00
+BO 	106/3	Canto Rodado Rojo Alicante 20/40mm, en bigbag, tn	181,82	220,00
+BO 	106/3S	Canto Rodado Rojo Alicante 20/40mm, saco 20 kg	6,61	8,00
+BO 	107	Canto Rodado de Río Gris 4/12mm, big bag	70,25	85,00
+BO 	107S	Canto Rodado de Río Gris 4/12mm, saco25kg	4,50	5,45
+BO 	107/1	Canto Rodado de Río Gris 12/20, big bag	70,25	85,00
+BO 	107/1S	Canto Rodado de Río Gris 12/20, saco 25kg	2,89	3,50
+BO 	107/2	Canto Rodado de Río Gris 20/40, big bag	70,25	85,00
+BO 	107/2S	Canto Rodado de Río Gris 20/40, saco 25kg	2,89	3,50
+BO 	107/3	Canto Rodado de Río Gris 40/80, big bag	70,25	85,00
+BO 	107/3U	Canto Rodado de Río Gris 40/80, kg	0,17	0,20
+
+
+BO 	119RD612	Canto Rodado de Río Marrón 6/12mm, big bag	0,00	0,00
+BO 	119RD612S	Canto Rodado de Río Marrón 6/12mm, saco25kg	0,00	0,00
+BO 	119RD1220	Canto Rodado de Río Marrón 12/20, big bag	78,51	95,00
+BO 	119RD1220S	Canto Rodado de Río Marrón 12/20, saco 25kg	0,00	0,00
+BO 	119RD2040	Canto Rodado de Río Marrón 20/40, big bag	78,51	95,00
+BO 	119RD2040S	Canto Rodado de Río Marrón 20/40, saco 25kg	0,00	0,00
+BO 	107RRD4060	Bolo Rio Rojo 40/60mm, bigbag	107,44	130,00
+BO 	107RRD4060U	Bolo Rio Rojo 40/60mm, kg	0,00	0,00
+BO 	107RRD6080	Bolo Rio Rojo 60/80mm, bigbag	107,44	130,00
+BO 	107RRD6080U	Bolo Rio Rojo 60/80mm, kg	0,00	0,00
+BO 	107RRD120150	Bolo Rio Rojo 120/150mm, bigbag	107,44	130,00
+BO 	107RRD120150U	Bolo Rio Rojo 120/150mm, kg	0,21	0,25
+BO 	107RRD500	Bolo Rio Rojo +150mm, tn	107,44	130,00
+BO 	107RRD500U	Bolo Rio Rojo +150mm, kg	0,21	0,25
+BO 	111	Grava Vólcanica Roja, Ø5/10mm, big bag	0,00	0,00
+BO 	111S	Grava Vólcanica Roja, Ø5/10mm, saco 18L	0,00	0,00
+BO 	111/7	Grava Vólcanica Roja, Ø6/12mm, big bag	103,31	125,01
+BO 	111/7S	Grava Vólcanica Roja, Ø6/12mm, saco 18L	4,96	6,00
+BO 	111/1	Grava Volcánica Roja, Ø12/25mm, big bag	107,44	130,00
+BO 	111/1S	Grava Volcánica Roja, Ø12/25mm, saco 18L	4,96	6,00
+BO 	111/2	Grava Volcánica Roja, Ø25/30mm, big bag	0,00	0,00
+BO 	111/2S	Grava Volcánica Roja, Ø25/30mm, saco 18L	0,00	0,00
+BO 	111/3	Grava Volcánica Roja, Ø25/40mm, big bag	103,31	125,01
+BO 	111/3S	Grava Volcánica Roja, Ø25/40mm, saco 18L	4,96	6,00
+BO 	111/4	Grava Vólcanica Roja, Ø40/50 mm, big bag	0,00	0,00
+BO 	111/5	Grava Vólcanica Roja, Ø40/100 mm, big bag	103,31	125,01
+BO 	111/6	Grava Vólcanica Roja, Ø >100 mm, big bag	148,76	180,00
+BO 	111/6U	Grava Vólcanica Roja, Ø >100 mm, kg	0,25	0,30
+BO 	111/1N	Grava Vólcanica Negra, Ø10/25mm mm, big bag	82,65	100,01
+BO 	113	Rocalla Caliza 200/400 mm en jaula, Tn	181,82	220,00
+BO 	113U	Rocalla Caliza 200/400 mm en jaula, kg	0,29	0,35
+BO 	113/1	Rocalla Caliza 400/600 mm en jaula, Tn	181,82	220,00
+BO 	113/1U	Rocalla Caliza 400/600 mm en jaula, kg	0,50	0,61
+BO 	108/10	Triturado Rosa , Ø6/10 mm en big bag, tn	144,63	175,00
+BO 	108/10S	Triturado Rosa , Ø6/10 mm saco de 20kg	4,96	6,00
+BO 	108/11	Triturado Rosa , Ø10/15 mm en big bag, tn	144,63	175,00
+BO 	108/11S	Triturado Rosa , Ø10/15 mm saco de 20kg	4,96	6,00
+BO 	108/12	Triturado Rosa , Ø15/25 mm en big bag, tn	144,63	175,00
+BO 	108/12S	Triturado Rosa , Ø15/25, saco de 20kg	4,96	6,00
+BO 	108/13	Triturado Rosa , Ø25/30 mm en big bag, tn	144,63	175,00
+BO 	108/13S	Triturado Rosa , Ø25/30, saco de 20kg	4,96	6,00
+BO 	106/12	Triturado Rojo Alicante, Ø12/20 mm en big bag, tn	132,23	160,00
+BO 	106/12S	Triturado Rojo Alicante, Ø12/20 mm, saco de 20 kg	4,96	6,00
+BO 	106/13	Triturado Rojo Alicante, Ø18/30 mm en big bag, tn	132,23	160,00
+BO 	106/13S	Triturado Rojo Alicante, Ø18/30 mm, saco de 20 kg	4,96	6,00
+BO 	121TR1220	Triturado Gris Nevado 12/18mm en bigbag, tn	128,10	155,00
+BO 	121TR1220S	Triturado Gris Nevado 12/18mm en saco 20kg	4,96	6,00
+BO 	121TR1830	Triturado Gris Nevado 18/30mm en bigbag, tn	128,10	155,00
+BO 	121TR1830S	Triturado Gris Nevado 18/30mm en saco 20kg	4,96	6,00
+BO 	119TR36BB	Triturado Marrón 3/6mm, bigbag	61,98	75,00
+BO 	115TR14	Triturado Blanco 1/4 mm, big bag	70,25	85,00
+BO 	115/10	Triturado Blanco 5/10 mm, big bag	70,25	85,00
+BO 	115/11	Triturado Blanco 10/20mm, bigbag	70,25	85,00
+BO 	115/10S	Triturado Blanco 5/10 mm, saco 25kg	2,89	3,50
+BO 	115/11S	Triturado Blanco 10/20mm, saco 25kg	2,89	3,50
+BO 	115S/12	Triturado Blanco Select. 16/40mm, bigbag	103,31	125,01
+BO 	115S/12S	Triturado Blanco Select. 16/40mm, saco 25kg	4,13	5,00
+BO 	109/12	Triturado Blanco Lavado 12/18mm, big bag, tn	105,79	128,01
+BO 	109/13	Triturado Blanco Lavado 18/30mm, big bag, tn	105,79	128,01
+BO 	109/12S	Triturado Blanco Lavado 12/18mm, saco 20kg	3,31	4,01
+BO 	109/13S	Triturado Blanco Lavado 18/30mm, saco 20kg	3,31	4,01
+BO 	109TR200300	Cachote Blanco 200/300mm selec. en bigbag, tn	115,70	140,00
+BO 	109TR200300U	Cachote Blanco 200/300mm selec., kg	0,21	0,25
+BO 	112	Garbancillo Amarillo 5/10mm, big bag	37,19	45,00
+BO 	112/1	Garbancillo Amarillo 12/25mm, bigbag	37,19	45,00
+BO 	112/2	Garbancillo Amarillo 20/40mm, bigbag	0,00	0,00
+BO 	112S	Garbancillo Amarillo 5/10 - 12/25mm, saco 25kg	2,48	3,00
+BO 	114/11	Pétalos de pizarra pequeño, bigbag	99,17	120,00
+BO 	114/11S	Pétalos de pizarra pequeño, saco	4,13	5,00
+BO 	114/14	Pétalos de pizarra mediano, bigbag	99,17	120,00
+BO 	114/14S	Pétalos de pizarra mediano, saco	4,13	5,00
+BO 	116/13	Triturado Negro Betún 6/10	66,12	80,01
+BO 	116/13S	Triturado Negro Betún 6/10, saco	0,00	0,00
+BO 	116/11	Triturado Negro Betún 10/20	66,12	80,01
+BO 	116/11S	Triturado Negro Betún 10/20, saco	0,00	0,00
+BO 	116/12	Triturado Negro Betún 18/30	66,12	80,01
+BO 	116/12S	Triturado Negro Betún 18/30, saco	0,00	0,00
+BO 	118	Gravilla Roja Tostada, big bag	0,00	0,00
+BO 	118S	Gravilla Roja Tostada, saco	2,50	3,03
+BO 	0	Arena lavada tostada 2/4  - 2/10mm, bigbag	49,59	60,00
+BO 	0	Triturado Marrón 3/6mm, bigbag	61,98	75,00
+BO 	120TR02	Cerámica molida 0/2mm, tn	99,17	120,00
+BO 	120TR25	Gravilla cerámica 2/5mm, tn	99,17	120,00
+BO 	100CP1320	Corteza pino 13/20, bigbag	74,38	90,00
+BO 	100CP2025	Corteza pino 20/25, bigbag	74,38	90,00
+BO 	100CP2540	Corteza pino 25/40, bigbag	74,38	90,00
+BO 	100CP0813	Corteza pino molida 0/8 - 8/13mm, bigbag	70,25	85,00
+BO 	ARSTC01	Sustrato recebo cesped, bigbag	103,31	125,01
+BO 	ARSI051S	Arena silice 0,50-1mm, saco 25kg	4,96	6,00
+BO 	0	Monolito pizarra	148,76	180,00
+CU 	507	Cuarcita Verde Dorado 60x30x1,2/1,8cm, m2	0,00	0,00
+CU 	507/1           	Peldaño Cuarcita Verde Dorado 100x30x3cm, ml	0,00	0,00
+
+
+
+CU 	500 B           	Cuarcita Oro, 60x30x1,2/1,8cm, m2	0,00	0,00
+CU 	650/1	Amarillo Tropical 47x23cm, gr. 8/15mm, m2	0,00	0,00
+CU 	650/2	Amarillo Tropical 50x25cm, gr. 12/25mm, cantos cizallados, m2	30,00	36,30
+CU 	650/3	Amarillo Tropical 60x33cm, gr. 25/40mm, cantos cizallados, ml	12,40	15,00
+CU 	CT603015	Cuarcita Tostada 60x30x1,5cm flameado, m2	0,00	0,00
+CU 	CT603020	Cuarcita Tostada 60x30x2cm flameado, m2	32,23	39,00
+CU 	CT10033P	Cuarcita Tostada 100x33x3cm flameado, c/1 c. larg. cizallado, ml	0,00	0,00
+CU 	CT5033P	Cuarcita Tostada 50x33x3cm flameado, c/1 c. larg. cizallado, ml	18,18	22,00
+CU 	CT3015X	Cuarcita Tostada 30x15x1-3cm escarfilado, m2	0,00	0,00
+CU 	0	Cuarcita gris Lugo 80x40cm, ud	15,00	18,15
+CH 	160	Chapa Marrón Oro, palet	223,14	270,00
+CH 	160U            	Chapa Marrón Oro , fila	11,60	14,04
+CH 	160F	Chapa Marrón Oro fina, palet	223,14	270,00
+CH 	160FU	Chapa Marrón Oro fina, fila	12,00	14,52
+CH 	160/1           	Chapa Marrón Mixta, palet	223,14	270,00
+CH 	160/1U          	Chapa Marrón Mixta, fila	12,00	14,52
+CH 	160/1F   	Chapa Marrón Mixta Fina, palet	223,14	270,00
+CH 	160/1FU          	Chapa Marrón Mixta Fina, fila	0,00	0,00
+CH 	160/1G	Chapa Marrón Mixta Gruesa, palet	206,61	250,00
+CH 	160/1GU	Chapa Marrón Mixta Gruesa, fila	14,88	18,00
+CH 	160/2           	Chapa Gris Mixta, palet	223,14	270,00
+CH 	160/3	Cuarcita Gris / Azul , palet	223,14	270,00
+CH 	150	Chapa Cuarcita Marrón Oxidada 2/3cm, palet	235,00	284,35
+CH 	150U            	Chapa Cuarcia Marrón Oxidada 2/3cm, m2	12,00	14,52
+CH 	150/3           	Chapa Multicolor Gris, palet	214,88	260,00
+CH 	150/3U          	Chapa Multicolor Gris, m2	12,00	14,52
+CH 	154	Chapa Filita Roja Oxidada, 2/3cm, palet	181,82	220,00
+CH 	154/1           	Chapa Filita Roja Oxidada, 4/6 cm, palet	181,82	220,00
+CH 	155	Chapa Cuarcita Amarilla Paderne 2/3cm, palet	214,88	260,00
+CH 	155U	Chapa Cuarcita Amarilla Paderne 2/3cm, fila	12,00	14,52
+CH 	155/1	Chapa Cuarcita Gris Paderne 2/3cm, palet	0,00	0,00
+CH 	155/1U	Chapa Cuarcita Gris Paderne 2/3cm, fila	12,00	14,52
+CH 	320	Chapa Gneiss Ocre  2/3 cm, 25 filas, palet	305,79	370,01
+CH 	320U	Chapa Gneiss Ocre  2/3 cm, fila	13,22	16,00
+CH 	320F	Chapa Gneiss Ocre fina 1/2 cm, 35 filas, palet	396,70	480,01
+CH 	320FU	Chapa Gneiss Ocre fina 1/2 cm, fila	13,22	16,00
+CH 	320G	Chapa Gneiss Ocre mediana 3/4 cm, 20 filas, palet	260,33	315,00
+CH 	320GU	Chapa Gneiss Ocre mediana  3/4 cm, fila	13,22	16,00
+CH 	320X	Chapa Gneiss Ocre extra gruesa  4/6 cm, 15 filas, palet	202,48	245,00
+CH 	154/2           	Chapa Lugo fina 2/3cm, palet	243,80	295,00
+CH 	154/3           	Chapa Lugo mediana 3/4cm, palet	202,48	245,00
+CH 	154/4           	Chapa Lugo gruesa 4/6cm, palet	243,80	295,00
+CH 	154G	Chapa Lugo gris 2/3cm, palet	200,00	242,00
+CH 	154GU	Chapa Lugo gris 2/3cm, fila	0,00	0,00
+CH 	154/5           	Chapa Musgo, palet	165,29	200,00
+CH 	303/8           	Chapa Santiago, 4/5 cm, palet	190,08	230,00
+CH 	303/8U          	Chapa Santiago, 4/5 cm, fila	12,00	14,52
+CH 	350F	Chapa Cuarcita Amarilla Violeta fina, palet	0,00	0,00
+CH 	350FU	Chapa Cuarcita Amarilla Violeta fina, fila	12,00	14,52
+
+
+CH 	350	Chapa Cuarcita Amarilla Violeta, palet	235,00	284,35
+CH 	350U	Chapa Cuarcita Amarilla Violeta, fila	0,00	0,00
+CH 	350G	Chapa Cuarcita Amarilla Violeta gruesa, palet	200,00	242,00
+CH 	350GU	Chapa Cuarcita Amarilla Violeta gruesa, fila	12,00	14,52
+CH 	130	Chapa Cuarcita Violeta Mixta fina (40 filas), palet	0,00	0,00
+CH 	130/1	Chapa Cuarcita Violeta Mixta gruesa, palet	0,00	0,00
+CH 	153	Chapa Marrón Arena, palet	0,00	0,00
+CH 	203/2           	Chapa Pizarra País irreg. rústica, palet	165,29	200,00
+CH 	203/2U          	Chapa Pizarra País irreg. rústica, fila	10,00	12,10
+CH 	203/4           	Chapa Pizarra País Irreg., palet	227,27	275,00
+CH 	203/4U          	Chapa Pizarra País Irreg., 2/3cm, fila	10,00	12,10
+CH 	300/5	Chapa Xisto Negro 3/4cm, palet	0,00	0,00
+CH 	300/6	Chapa Xisto oxidado 2/3cm (25 filas), palet	289,26	350,00
+CH 	300/6U	Chapa Xisto oxidado, 2/3cm, fila	12,40	15,00
+CH 	300/6F	Chapa Xisto oxidado, 1/2cm, palet	0,00	0,00
+CH 	300/6G	Chapa Xisto oxidado 3/5cm, 20 filas,palet	231,41	280,01
+CH 	300/6GU	Chapa Xisto oxidado, 3/5cm,fila	0,00	0,00
+CH 	140	Chapa Cuarcita Marrón Clara, 4/5cm, 20 filas, palet	0,00	0,00
+CH 	140U	Chapa Cuarcita Marrón Clara, 4/5cm, 20 filas, palet	0,00	0,00
+CH 	170	Chapa Irreg. Pizarra Verde, 2/3 cm, 30 filas, palet	0,00	0,00
+CH 	145	Chapa Vidrio Crema, 30 filas, palet	320,00	387,20
+CH 	145U	Chapa Vidrio Crema, fila	12,00	14,52
+CH 	145G	Chapa Vidrio Crema gruesa 3/5cm, 20 filas, palet	202,48	245,00
+CH 	145GU	Chapa Vidrio Crema gruesa 3/5cm, fila	12,00	14,52
+CH 	0	Chapa Luz Océano, palet	190,00	229,90
+CH 	156F	Chapa Marrón Varadero fina, palet	235,54	285,00
+CH 	156FU	Chapa Marrón Varadero fina, fila	12,00	14,52
+CH 	156	Chapa Marrón Varadero, palet	235,54	285,00
+CH 	156U	Chapa Marrón Varadero, fila	12,00	14,52
+CH 	157	Chapa Vieja Brillante, palet	0,00	0,00
+CH 	157U	Chapa Vieja Brillante, fila	10,00	12,10
+CH 	180	Chapa Irreg. Granito moreno abujardado, grueso 5cm, fila	27,27	33,00
+CH 	180/2	Chapa Irreg. Granito moreno abujardado, grueso 3cm, fila	24,79	30,00
+CH 	180/1	Chapa grande Irreg. Granito moreno abujardado, grueso 3cm, fila	24,79	30,00
+CH 	0	Chapa Irreg. Granito moreno abujardado, grueso 2cm, fila	20,66	25,00
+CH 	183	Chapa Irreg. Granito moreno abuj., grueso 3cm, (recortes) fila	11,16	13,50
+CH 	0	Chapa Irreg. Granito moreno serrada, grueso 3cm, fila	9,00	10,89
+CH 	181	Chapa Rústica Granito moreno, palet	0,00	0,00
+CH 	182	Chapa granito resuelo, palet	173,55	210,00
+CH 	182U	Chapa granito resuelo, fila	18,00	21,78
+CH 	650	Chapa Cuarcita Amarillo Tropical 1,5/2,5cm, fila	14,88	18,00
+EXT	BNC104	Banco en granito c/respaldo L=200cm, mod. Senior	350,00	423,50
+EXT	BNCDE16	Banco granito c/ respaldo, L=200cm, mod. Arco	495,87	600,00
+EXT	BNC	Banco granito c/ respaldo, L=200cm, mod. Modular	495,87	600,00
+EXT	BNC	Banco granito L=150cm, mod. Parque	290,00	350,90
+EXT	BNC	Banco granito L=150cm, mod. Pazo	310,00	375,10
+EXT	BNC	Banco granito L=150cm simple urban, ud	190,08	230,00
+EXT	BNC	Banco granito L=150cm simple maxi cubo, ud	206,61	250,00
+EXT	BNC	Banco granito L=150cm mod. Maxi Urban	289,27	350,02
+EXT	BNCX200	Banco Xisto 200x40cm c/ patas de 40x40x40cm, ud	165,29	200,00
+EXT	BNCX150C	Banco Xisto 150x35cm cepillado c/patas de 30x20x40cm, ud	181,82	220,00
+EXT	FNT114	Fuente de pared en granito 3 piezas, pia cuadrada, ud	375,00	453,75
+EXT	FNT119	Fuente de pared en granito 3 piezas, pia redonda, ud	350,00	423,50
+EXT	FNT          	Fuente rústica c/ pía + columna	325,00	393,25
+EXT	FNTDE11	Fuente pared c/pia baja + mural, mod. Celestial	360,00	435,60
+EXT	FNT          	Fuente centro 1 taza mod. Parque Hexagonal, ud	350,00	423,50
+EXT	FNT          	Fuente granito redonda 3 tazas, con lago,  mod. Ogmios	2.314,05	2.800,00
+EXT	FNT	Fuente granito con lago,  mod. Octágono	1.239,67	1.500,00
+
+
+EXT	MES107         	Mesa en granito 200x100cm, c/ 2 bancos y 2 taburetes	1.074,38	1.300,00
+EXT	MESDE06	Mesa en granito 200x100cm, c/ 2 bancos y 2 taburetes	743,80	900,00
+EXT	MES105         	Mesa en granito redonda, Ø120cm, c/3 bancos	1.074,38	1.300,00
+EXT	MES107/1	Mesa en granito 250x100cm, c/2 bancos y 2 taburetes	1.239,67	1.500,00
+EXT	MESDE06/1	Mesa en granito 250x100cm, c/2 bancos y 2 taburetes	909,09	1.100,00
+EXT	MESX200	Mesa Xisto Rústico 200x100cm c/2 bancos, ud	909,09	1.100,00
+EXT	MESX200S	Mesa Xisto cepillado 200x100cm c/2 bancos, ud	1.074,38	1.300,00
+EXT	MESX250	Mesa Xisto Rústico 250x100cm c/2 bancos, ud	826,45	1.000,00
+EXT	0	Mesa Pizarra 200x80x5cm rustica c/ 2 apoyos, ud	698,35	845,00
+EXT	POZDE25	Pozo en granito 200x110 rústico/abujardado, transv. Cilindrico	1.198,35	1.450,00
+EXT	POZDE34/64	Pozo en granito 200x110 rústico/abujardado c/ Arco	1.280,99	1.550,00
+EXT	HOR101	Horreo en granito 250x100cm c/balaustres	1.818,18	2.200,00
+EXT	HOR	Horreo en granito 150x70cm 	800,00	968,00
+EXT	CRU	Cruceiro simple cuadrado, s/cristo	661,16	800,00
+EXT	CRU	Cruceiro redondo c/base, c/cristo	1.405,00	1.700,05
+EXT	0	Pia en granito rústica 50x50xH30cm, 55x45xH30cm, ud	247,93	300,00
+EXT	0	Pia en granito rústica 45x40x20cm	231,41	280,01
+EXT	0	Pia en granito rústica 80x40x30cm	280,00	338,80
+EXT	0	Pia en granito rústica 120x50xH40cm	620,00	750,20
+EXT	0	Pia en granito rústica diam. 50cm, ud	322,31	390,00
+EXT	0	Pedestal granito 110x15x15cm, con base y capitel moldurado 	0,00	0,00
+EXT	0	Pedestal granito 110x15x15cm, con base y capitel simple	0,00	0,00
+EXT	0	Esfera granito diam. 20cm, ud	50,00	60,50
+EXT	0	Esfera granito diam. 25cm, ud	55,00	66,55
+EXT	0	Esfera granito diam. 30cm, ud	65,00	78,65
+GRA	PIL101	Columna en granito 20x20cm, acabado rústico, ml	0,00	0,00
+GRA	PIL101/1  	Columna en granito moreno 250x25x25cm, acabado rústico, ud	239,67	290,00
+GRA	PIL101/2        	Columna en granito 30x30 cm, acabado rústico, ml	0,00	0,00
+GRA	PIL101G/1	Columna en granito gris 250x25x25cm, acabado rustico, ud	115,70	140,00
+GRA	PIL103/2          	Columna en granito, 30x30 cm, c/aristas reb., c/ base y capitel, ml	170,00	205,70
+GRA	PIL103/1	Columna en granito, 25x25 cm, c/aristas reb., c/ base y capitel, ml	150,00	181,50
+GRA	PIL103	Columna en granito, 20x20 cm, c/aristas reb., c/ base y capitel, ml	125,00	151,25
+GRA	PIL105          	Columna en granito, redondo Ø20cm, c/ ranuras, ml	0,00	0,00
+GRA	PIL104          	Columna en granito, trenzado Ø25cm, ml	0,00	0,00
+GRA	PIL102/2        	Columna redonda Ø30 en granito, ml	0,00	0,00
+GRA	PIL102/1	Columna redonda Ø25 en granito, ml	0,00	0,00
+GRA	PIL102          	Columna redonda Ø20 en granito, ml	0,00	0,00
+GRA	PIL106	Columna cuadrada 25x25cm decreciente, con base y capitel, ml	0,00	0,00
+GRA	PIL107	Columna en granito abuj. 20x20cm, s/ base, s/ capitel, ml	85,00	102,85
+GRA	PIL107/1	Columna en granito abuj. 25x25cm, s/ base, s/ capitel, ml	103,31	125,01
+GRA	PIL107/2	Columna en granito abuj. 30x30cm, s/ base, s/ capitel, ml	90,00	108,90
+GRA	GRSM2	Granito moreno silvestre LL/60x40x2cm abujardado, m2	0,00	0,00
+GRA	GRMA2	Granito moreno atlántico  60x40x2cm arenado, m2	35,54	43,00
+GRA	GRMA3	Granito moreno atlántico  60x40x3cm arenado, m2	37,19	45,00
+GRA	GRMB2	Granito moreno albero  60x40x2cm granallado, m2	31,41	38,01
+GRA	GRMC2	Granito moreno Negrelos 60x40x2cm granallado, m2	31,41	38,01
+GRA	GRMC3	Granito moreno Negrelos 60x40x3cm granallado, m2	0,00	0,00
+GRA	GRMF2	Granito moreno Falperra 60x40x2cm granallado, m2	31,41	38,01
+GRA	GRMF3	Granito moreno Falperra 60x40x3cm granallado, m2	33,06	40,00
+GRA	GRMP2	Granito moreno pardo 60x40x2cm arenado, m2	0,00	0,00
+GRA	GRMP3	Granito moreno pardo 60x40x3cm arenado, m2	0,00	0,00
+GRA	GRMP3/1	Granito moreno pardo LLx40x3cm abujardado, m2	37,19	45,00
+GRA	GRGT2	Granito gris Tragal 60x40x2cm flameado, m2	28,10	34,00
+GRA	0	Granito gris Silvestre 60x40x2cm granallado, m2	28,10	34,00
+GRA	0	Granito gris Silvestre 60x30x2cm granallado, m3	26,45	32,00
+GRA	GRMAP5	Granito moreno atlantico 110x35x5cm c/ cara + 1 frente arenado, ud	29,75	36,00
+GRA	GRMCP5	Granito moreno cascais 110x35x5cm c/ cara + 1 frente granallado, ud	0,00	0,00
+GRA	GRMAPE	Granito moreno atlántico Esquinal 45x45x5cm arenado, ud	35,00	42,35
+GRA	GRMEQ1	Esquinal macizo granito moreno 40x30x10cm	14,88	18,00
+GRA	GRMEQ2	Esquinal macizo granito moreno 45x35x15cm	19,84	24,01
+NT 	508	NTB Gneiss, 55x20x2,5/3,5 cm, m2	47,93	58,00
+NT 	508/1           	NTB Gneiss, esq., m2	53,72	65,00
+NT 	509	NTB Otoño, 55x20x2,5/3,5 cm, m2	47,93	58,00
+NT 	509/1           	NTB Otoño, esq	53,72	65,00
+
+
+
+NT 	509C	NTB Otoño Combi, 46,5x20cm, m2	0,00	0,00
+NT 	513	NTB Multicolor Invierno Rústico, 55x20x2,5/3,5cm, m2	47,93	58,00
+NT 	513/1	NTB Multicolor Invierno, esq., m2	53,72	65,00
+NT 	513C	NTB Multicolor Invierno Rústico 46,5x20cm, m2	0,00	0,00
+NT 	521	NTB Negro Ceniza 55x20cm, m2	45,46	55,01
+NT 	521/1	NTB Negro Ceniza 55x20cm, esquina, m2	0,00	0,00
+NT 	525	NTB Cuarcita Oro, 55x20x2,5/3,5cm, m2	49,59	60,00
+NT 	525/1	NTB Cuarcita Oro, 55x20x2,5/3,5cm, m2	57,85	70,00
+NT 	526	NTB Pirineo, 55x20x2,5/3,5cm, m2	49,59	60,00
+NT 	528	NTB Nilo, 55x20x2,5/3,5cm, m2	49,59	60,00
+NT 	511	NTP Arenisca 50x20cm, m2	0,00	0,00
+NT 	505	NTP Cuarcita Dorada, 50x20cm, m2	45,46	55,01
+NT 	505/1           	NTP Cuarcita Dorada esq., m2	53,72	65,00
+NT 	505L	NTP Cuarcita Dorada Light, 50x20cm, m2	47,93	58,00
+NT 	506	NTP Multicolor Invierno, 50x20 cm, m2	45,46	55,01
+NT 	506/1           	NTP Multicolor Invierno esq., m2	53,72	65,00
+NT 	506L	NTP Multicolor Invierno Light, 55x15 cm, m2	0,00	0,00
+NT 	519	NTP Colorado 55x15cm, m2	0,00	0,00
+NT 	504	NTT Cuarcita Verde Dorada, 35x18cm, m2	29,75	36,00
+NT 	504/1           	NTT Cuarcita Verde Dorada esq., m2	33,06	40,00
+NT 	504E	NTT Cuarcita Dorada, 35x18cm, m3	33,06	40,00
+NT 	504E/1	NTT Cuarcita Dorada esq., m3	36,36	44,00
+NT 	512	NTT Gneiss 35x18cm, m2	31,41	38,01
+NT 	512/1           	NTT Gneiss esq., m2	34,71	42,00
+NT 	503	NTT Multicolor 35x18cm,  m2	29,75	36,00
+NT 	503/1           	NTT Multicolor esq., m2	33,06	40,00
+NT 	510	NTT Negro Brillante 35x18cm, m2	31,41	38,01
+NT 	510/1           	NTT Negro Brillante 35x18cm, esq., m2	34,71	42,00
+NT 	514	NTT Cuarcita Tostada 35x18cm	31,41	38,01
+NT 	514/1	NTT Cuarcita Tostada 35x18cm, esq., m2	34,71	42,00
+NT 	515	NTF Cuarcita Marfil 55x15cm, m2	33,06	40,00
+NT 	516	NTF Multicolor 55x15cm, m2	31,41	38,01
+NT 	517	NTF Bronce 55x15cm, m2	33,06	40,00
+NT 	520	NTF Blanco Polar 55x15cm, m2	29,75	36,00
+NT 	522	NTL Compostela 40x25cm, m2	39,67	48,00
+NT 	523	NTL Silvestre 40x25cm, m2	39,67	48,00
+PIZ	502	Pizarra Multicolor Oriente, 60x30x1,5cm, m2	0,00	0,00
+PIZ	502/2	Pizarra Multicolor Oriente 60x90x2cm, calibrada, m2	0,00	0,00
+PIZ	502/7	Pizarra Multicolor Oriente, 80x40x3cm calibrada, m2	0,00	0,00
+PIZ	502/1           	Pizarra Multicolor Oriente, panel malla 1m2=4 pc, m2	0,00	0,00
+PIZ	502/3	Peldaño Pizarra Multicolor Oriente, 120x33x3cm, canto romo, ml	22,31	27,00
+PIZ	502/4	Pizarra Multicolor Oriente, 60x30x1,5cm, calibrada, m2	28,93	35,01
+PIZ	502/5	Tabla Pizarra Multicolor Oriente, 220x120x2cm, m2	48,60	58,81
+PIZ	502/6	Tabla Pizarra Multicolor Oriente, 220x120x3cm, m2	55,50	67,16
+PIZ	207/1	Pizarra Negra Oriente, 60x30x2cm, calibrado, m2	0,00	0,00
+PIZ	207	Pizarra Negra Oriente, 60x30x1cm, calibrado, m2	0,00	0,00
+PIZ	207/7	Pizarra Negra Oriente, 60x40x2cm, calibrado, m2	0,00	0,00
+PIZ	207/2	Tabla Pizarra Negra Oriente, 220x120x2cm, m2	46,50	56,27
+PIZ	207/3	Tabla Pizarra Negra Oriente, 220x120x3cm, m2	52,00	62,92
+PIZ	207/4	Peldaño Pizarra Negra Oriente, 120x33x3cm, canto romo, ml	23,14	28,00
+PIZ	207/5	Pizarra Negra Oriente, 60x90x2cm, calibrada, m2	0,00	0,00
+PIZ	207/6	Pizarra Negra Oriente, 60x90x2,5/3,5cm, cantos cizallados, m2	0,00	0,00
+PIZ	208	Pizarra Verde Oriente, LLx49x2cm - 120x50x2cm, calibrada, m2	31,41	38,01
+
+
+
+
+PIZ	208/1	Pizarra Verde Oriente, 60x30x1cm, calibrada, m2	23,14	28,00
+PIZ	201	Pizarra Gris Atlántico, 60x30x1 cm, m2	18,18	22,00
+PIZ	206/1           	Pizarra Negra Atlántico 40x20x1cm, m2	18,18	22,00
+PIZ	206	Pizarra Negra Atlántico 60x30x1cm, m2	20,66	25,00
+PIZ	206/3	Pizarra Negra Atlántico 60x40x1cm, m2	20,66	25,00
+PIZ	206/2           	Pizarra Negra Atlántico 60x40x2cm, m2	26,45	32,00
+PIZ	206P1	Peldaño Negro Atlántico 120x33x3cm c/1 canto largo apom., ud	29,75	36,00
+PIZ	206TB1	Pizarra Negra Tabla, 220-230x130x2cm, m2	70,00	84,70
+PIZ	206TB2	Pizarra Negra Tabla, 220-230x130x3cm, m2	80,00	96,80
+PIZ	206TB3	Pizarra Negra Tabla, 220x70x3cm, m2	70,25	85,00
+PIZ	202/2           	Pizarra Multicolor Atlántico 60x40x1,5cm, m2	0,00	0,00
+PIZ	202/1           	Pizarra Multicolor Atlántico 40x20x1 cm, m2	0,00	0,00
+PIZ	202	Pizarra Multicolor Atlántico 60x30x1cm, m2	23,14	28,00
+PIZ	200/1           	Pizarra Verde Atlántico, 40x20x1cm, m2	16,00	19,36
+PIZ	200	Pizarra Verde Atlántico, 60x30x1cm, m2	0,00	0,00
+PIZ	216	Pizarra Negra País 80x40x3cm Nat/Nat, s/ escuadrar, m2	33,57	40,62
+PIZ	216/9	Pizarra Negra País 80x50x3cm Nat/Nat, s/ escuadrar, m2	33,06	40,00
+PIZ	216/7	Pizarra Negra País 100x30x3cm Nat/Nat, s/ escuadrar, m2	35,81	43,33
+PIZ	216/10	Pizarra Negra País 100x40x3cm Nat/Nat, s/ escuadrar, m2	33,06	40,00
+PIZ	216/1	Pizarra Negra País 100x50x3cm Nat/Nat, s/ escuadrar, m2	33,06	40,00
+PIZ	216/8	Pizarra Negra País 120x50x3cm Nat/Nat, s/ escuadrar, m2	0,00	0,00
+PIZ	216/2	Pizarra Negra País 150x50x3cm Nat/Nat, s/ escuadrar, m2	35,26	42,66
+PIZ	216/3	Pizarra Negra País 200x50x3cm Nat/Nat, s/ escuadrar, m2	38,02	46,00
+PIZ	216/4	Pizarra Negra País 150x30x3cm Nat/Nat, s/ escuadrar, m2	34,89	42,22
+PIZ	216/5	Pizarra Negra País 50x50x3cm Nat/Nat, s/ escuadrar, m2	29,75	36,00
+PIZ	216S200503	Pizarra Negrs Pais 200x50x3cm serrada, m2	57,85	70,00
+PIZ	216/6	Pizarra Negra País 60x30x1-1,5cm nat/nat, m2	16,53	20,00
+PIZ	215	Pizarra País 60x30x1,5 cm nat/nat, m2	23,14	28,00
+PIZ	0	Pizarra País 35x25 cm fina, m2	8,27	10,01
+PIZ	203	Pizarra País 35x25 cm (+/- 38- 40m2/palet), palet	272,72	329,99
+PIZ	203U            	Pizarra País, 35x25 cm, ud	1,00	1,21
+PIZ	203/1	Pizarra País, 52x27 cm, palet	0,00	0,00
+PIZ	203/1U	Pizarra País, 52x27 cm, ud	2,07	2,50
+PIZ	203/5	Pizarra País 30x40x2 cm, m2	20,66	25,00
+PIZ	203/5U	Pizarra País 30x40x2 cm, ud	2,89	3,50
+PIZ	0	Pizarra País 30x45x3 cm, m2	23,14	28,00
+PIZ	0	Pizarra País 60x30x3 cm, m2	23,14	28,00
+PIZ	0	Pizarra Roja LLx30cm, m2	28,93	35,01
+PIZ	0	Pasos japoneses Pizarra País, Ø40cm, ud	0,00	0,00
+PIZ	203R50        	Pasos japoneses Pizarra País, Ø50cm, ud	8,27	10,01
+PIZ	203R60	Pasos japoneses Pizarra País, Ø60cm, ud	13,00	15,73
+PIZ	154B30	Pizarra pizarra Roja LLx30cm, m2	30,00	36,30
+PIZ	218	Pizarra Negra Pais Campo calibrada 60x30x1cm, m2	27,27	33,00
+PIZ	0	Pizarra Verde 40x40x3/4cm (+/-70uds)	0,00	0,00
+PIZ	0	Pizarra Verde 40x40x3/4cm, ud	3,50	4,24
+PIZ	0	Pizarra Verde 60x30x2/4cm, palet	300,00	363,00
+PIZ	0	Pizarra Verde 60x30x2/4cm, ud	5,00	6,05
+PIZ	205/6	Pizarra País cubierta, 30x20cm (43uds/m2), m2	15,70	19,00
+PIZ	205/6U	Pizarra País cubierta, 30x20cm, ud	0,00	0,00
+PIZ	205/1           	Pizarra País cubierta, 35x25cm (30uds/m2), m2	0,00	0,00
+PIZ	205/1U          	Pizarra País cubierta, 35x25cm, ud	0,00	0,00
+PIZ	205/2	Pizarra País cubierta, 32x22cm (36uds/m2), m2	0,00	0,00
+PIZ	205/2U	Pizarra País cubierta, 32x22cm, ud	0,00	0,00
+PIZ	205/3	Pizarra País cubierta, 40x20cm (30uds/m2), m2	0,00	0,00
+PIZ	205/3U	Pizarra País cubierta, 40x20cm, ud	0,74	0,90
+PIZ	205/4	Pizarra País cubierta, 40x25cm (25uds/m2), m2	0,00	0,00
+PIZ	205/4U	Pizarra País cubierta, 40x25cm, ud	1,10	1,33
+PIZ	205/5RB	Pizarra País cubierta 40x30cm Rombo (21uds/m2), m2	0,00	0,00
+PIZ	205/5URB	Pizarra País cubierta 40x30cm Rombo, ud	1,50	1,82
+PIZ	205/3RD	Pizarra País cubierta 40x20cm Rda (30 uds/m2), m2	0,00	0,00
+PIZ	205/3URD	Pizarra País cubierta 40x20cm Rda, ud	0,00	0,00
+PIZ	205GR	Pizarra País cubierta a granel, palet	0,00	0,00
+PIZ	205GRR	Pizarra País cubierta a granel recortada, +/-18m2, palet	320,00	387,20
+PIZ	300/10	Xisto Negro 100x12x5cm, ud	6,20	7,50
+PIZ	300/13	Xisto Negro, 100x20 cm, ml	0,00	0,00
+PIZ	300/2           	Xisto Negro, 100x25 cm, ml	10,74	13,00
+PIZ	300/1	Xisto Negro, 80x40cm, m2	38,74	46,88
+PIZ	300/13	Xisto Negro 80x30cm, m2	0,00	0,00
+PIZ	300/4           	Xisto Negro, 100x50cm, m2	38,02	46,00
+PIZ	300/7           	Xisto Negro, 130x50cm, m2	40,69	49,23
+PIZ	300/9           	Xisto Negro, 150x50cm, m2	41,88	50,67
+
+
+PIZ	300/12	Xisto Negro, 100x40cm, m2	38,22	46,25
+PIZ	300/8	Xisto Negro, 100x35cm, m2	0,00	0,00
+PIZ	300/14	Xisto Negro, 100x30cm, m2	38,57	46,67
+PIZ	300/11	Xisto Negro 200x50cm, m2	56,20	68,00
+PIZ	300/3           	Xisto Negro, 50x50cm, m2	42,98	52,01
+PIZ	0	Xisto Negro, 200-250x50cm, m2	66,12	80,01
+PIZ	0	Xisto Negro, 250-300x50cm, m2	70,25	85,00
+PIZ	302/2	Bandas Xisto Oxidado LLx5cm, m2	28,93	35,01
+PIZ	302/3	Bandas Xisto Oxidado LLx10cm, m2	28,93	35,01
+MT	TRWL12TB	Travertino Delta 60x40x1,2cm envejecido, m2	23,14	28,00
+MT	TRNC12TB	Travertino Noce 60x40x1,2cm envejecido, m2	24,79	30,00
+MT	TRSL12TB	Travertino Silver 60x40x1,2cm envejecido, m2	31,41	38,01
+MT	TRMDVC12TB	Travertino Clasico Medium Venado 60x30x1,2cm envejecido, m2	28,93	35,01
+MT	TRMDP1	Peldaño Travertino Clasico Medium 120x35x3cm envejecido, ud	26,45	32,00
+MT	TRSL10X	Travertino Silver LLx10cm escarfilado, m2	29,75	36,00
+MT	TRNC10X	Travertino Noce LLx10cm escarfilado, m2	29,75	36,00
+MT	TRMDSK1	Lavabo travertino Clasico Medium 10x43cm CS01, ud	136,36	165,00
+MT	TRSLSK1	Lavabo travertino Silver 10x43cm CS01, ud	136,36	165,00
+MT	TRMDSK2	Lavabo travertino Clasico Medium 15x42cm CS14, ud	136,36	165,00
+MT	TRSLSK2	Lavabo travertino Silver 15x42cm CS14, ud	136,36	165,00
+MT	TRMDSK3	Lavabo travertino Clasico Medium 40x10x50cm SS01, ud	157,03	190,01
+MT	TRSLSK3	Lavabo travertino Silver 40x10x50cm SS01, ud	157,03	190,01
+MT	0	Mármol Blanco Ibiza 120x40x2cm cepillado, m2	34,71	42,00
+MT	0	Mármol Blanco Ibiza 3cm cepillado, m2	57,85	70,00
+TA 	156TA12	Taco Marrón Varadero, fondo 12cm, (+/-6m2/palet), palet	0,00	0,00
+TA 	156TA10	Taco Marrón Varadero, fondo 10cm, (+/-6m2/palet), palet	285,12	345,00
+TA 	156TA8	Taco Marrón Varadero, fondo 8cm, (+/-7m2/palet), palet	275,00	332,75
+TA 	156TA6	Taco Marrón Varadero, fondo 5/6cm, (+/-10m2/palet), palet	363,64	440,00
+TA 	155TA10	Taco Amarillo Paderne, fondo 10cm	260,00	314,60
+TA 	155TA8	Taco Amarillo Paderne, fondo 8cm	0,00	0,00
+TA 	303/1           	Taco Santiago mediano, big bag	107,44	130,00
+
+
+TA 	303	Taco Santiago pequeño, big bag	173,55	210,00
+TA 	303TAGR	Taco Santiago mediano granel, m3	0,00	0,00
+TA 	301/1           	Taco Xisto Negro largo variable, 2 extremos serrados, palet	235,54	285,00
+TA 	301/1U	Taco Xisto Negro largo variable, ml	3,31	4,01
+TA 	301/2	Taco Xisto Negro largo variable, 1 extremo serrado, palet	214,88	260,00
+TA 	301/2U	Taco Xisto Negro largo variable, ml	0,00	0,00
+TA 	301U            	Taco/Poste Xisto Negro L=100cm, 2 ext. serrados,ud	3,72	4,50
+TA 	301	Taco/Poste Xisto Negro L=100cm, 2 ext. serrados, palet	314,05	380,00
+TA 	0	Taco/Poste Xisto 200cm, ud	12,40	15,00
+TA 	300/1??	Taco Xisto oxidado 7/12cm, palet	0,00	0,00
+TA 	300	Taco Xisto oxidado irreg., palet	123,97	150,00
+TA 	150/1           	Taco Cuarcita Marrón Irregular, palet	168,00	203,28
+TA 	154TA12	Taco Filita Roja con fondo max. 12cm, palet 	280,00	338,80
+TA 	302	Taco Xisto Oxidado con fondo 3/4cm, palet (+/-15m2)	0,00	0,00
+TA 	321	Taco Marrón Ocre, bigbag	148,76	180,00
+TA 	413	Taco Multicolor con fondo 3/4cm, palet	28,93	35,01
+TA 	409	Taco Otoño con fondo 3/4cm, palet	0,00	0,00
+TA 	411	Taco Arizona con fondo 3/4cm, palet	33,06	40,00
+TA 	0	Cachote gris, bigbag	50,00	60,50
+TA 	325TA	Piedra muro silvestre, bigbag	86,78	105,00
+TA 	325TAm3	Piedra muro silvestre, m3	80,00	96,80
+TA 	0	Taco cizallado granito moreno Villalba	0,00	0,00
+TA 	326TA	Piedra muro granito pardo, bigbag	100,00	121,00
+TR 	700	Traviesa ferrocarril roble, L=260cm, calidad A, ud	33,06	40,00
+TR 	700/1	Traviesa madera Roble EXTRA,  ud	0,00	0,00
+TR 	701	Traviesas madera Roble, L=260cm, calidad B, ud	29,75	36,00
+TR 	701/2	Traviesas madera Roble, L=260cm, calidad C, ud	0,00	0,00
+TR 	701/3	Traviesas madera Roble, L=100cm, ud	0,00	0,00
+TR 	0	Traviesas madera Roble, L=130cm, ud	0,00	0,00
+TR 	0	Traviesas madera Roble, L=160cm, ud	0,00	0,00
+TR 	701/3	Traviesas madera Roble, L=200cm, ud	0,00	0,00
+TR 	702	Traviesa ferrocarril, L=260cm, calidad A, ud	0,00	0,00
+TR 	704	Traviesas ferrocarril largo especial 600-700cm	0,00	0,00
+TR 	704/1	Traviesas ferrocarril largo especial 380-400 cm,  ud	0,00	0,00
+TR 	704/2	Traviesas ferrocarril largo especial 410-450 cm,  ud	0,00	0,00
+TR 	0	Traviesas ferrocarril largo especial sup. a 380 cm,  ml	0,00	0,00
+TR 	703/2           	Bordillo Madera Ecológica tintado 250x20x8cm, ud	27,27	33,00
+TR 	703/1           	Traviesas madera Ecológica tintado 250x22x12cm, ud	0,00	0,00
+TR 	703	Traviesas madera Ecológica verde 250x22x12cm, ud	0,00	0,00
+TR 	703/4	Traviesas madera Ecológica verde 250x22x11cm, ud	0,00	0,00
+TR 	703/5	Traviesas madera Ecológica tintado 250x22x11cm, ud	29,75	36,00
+TR 	703/3M	Traviesas madera Ecológica tintada 250x20x10cm, ud	28,10	34,00
+CM	703/6	Traviesas madera Ecológica tintado 250x15x5cm, ud	12,40	15,00
+CM	CEM001	Cemento Portland gris 32,5, saco 25kg	4,13	5,00
+CM	CEM002	Cemento Portland gris 42,5, saco 25kg	0,00	0,00
+CM	CEMBL02	Cemento Portland blanco 42,5, saco 25kg	6,82	8,25
+CM	CCGF	Cemento Cola gris flexible ext, 25kg	10,74	13,00
+CM	CCGP	Cemento Cola gris ADHPI, saco 25kg	10,74	13,00
+CM	CCBP	Cemento Cola blanco ADHPI, saco 25kg	10,74	13,00
+CM	CMMPG	Mortero gris albañilería p/mampostería, saco 25kg	3,14	3,80
+CM	CMHS25	Hormigón seco HS25, saco 30kg	4,55	5,51
+CM	CMEP1H	Mortero hidrofugado encintado claro, saco 25kg	4,55	5,51
+CM	CMEP2H	Mortero hidrofugado encintado oscuro, saco 25kg	4,55	5,51
+CM	CMMRF	Mortero Refractario, saco 25kg	15,70	19,00
+CM	CMMRF5	Mortero Refractario, saco 5kg	5,79	7,01
+CP	RFCH1	Chamota refractaria, 25kg	9,09	11,00
+CP	RFL22115T	Ladrillo refractario 22x11x5cm, ud	0,66	0,80
+CP	RFL2255T	Ladrillo refractario 22x5x5cm, ud	0,50	0,61
+CP	RFL2253T	Ladrillo refractario 22x5x3cm, ud	0,46	0,56
+CP	CPH001	Hidrofugante incoloro, 5 litros	37,19	45,00
+CP	CPH001/2	Hidrofugante incoloro, 20 litros	132,23	160,00
+CP	0	Protector	0,00	0,00
+CP	0	Masilla refractaria negra 300º, cartucho	0,00	0,00
+CP	CPG1670IU	Ganchos inox p/pizarra 16x70mm, ud	0,08	0,10
+CP	CPG1670I	Ganchos inox p/pizarra 16x70mm, caja 1000 uds	37,19	45,00
+CP	CPG1680IU	Ganchos inox p/pizarra 16x80mm, ud	0,08	0,10
+CP	CPG1680I	Ganchos inox p/pizarra 16x80mm, caja 1000 uds	37,19	45,00
+CP	CPG16100IU	Ganchos inox p/pizarra 16x100mm, ud	0,08	0,10
+CP	CPG16100I	Ganchos inox p/pizarra 16x100mm, caja 1000 uds	37,19	45,00
+CP	CPLB01	Tela asafaltica negra c/ fibra de vidrio  (12m2), m2	9,64	11,66
+AR	CPTG01	Tégola americana negra RDA (3m2)	9,92	12,00
