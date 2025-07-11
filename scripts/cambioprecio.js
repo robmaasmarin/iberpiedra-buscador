@@ -17,7 +17,7 @@ function updatePrice() {
     return;
   }
 
-  fetch(`http://localhost:8080/producto/buscar-por-id?id=${encodeURIComponent(id)}`)
+  fetch(`https://iberpiedra-backend-production-1b67.up.railway.app/producto/buscar-por-id?id=${encodeURIComponent(id)}`)
     .then(res => {
       if (!res.ok) throw new Error("Producto no encontrado");
       return res.json();
@@ -33,7 +33,7 @@ function updatePrice() {
       if (confirm(mensaje)) {
         const nuevoPvpConIva = +(nuevoPvp * 1.21).toFixed(2);
 
-        fetch(`http://localhost:8080/producto/id/${encodeURIComponent(producto.id)}`, {
+        fetch(`https://iberpiedra-backend-production-1b67.up.railway.app/producto/id/${encodeURIComponent(producto.id)}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

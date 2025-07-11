@@ -28,7 +28,7 @@ function agregarProducto() {
         pvp_con_iva
     };
 
-    fetch("http://localhost:8080/producto", {
+    fetch("https://iberpiedra-backend-production-1b67.up.railway.app/producto", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

@@ -11,7 +11,7 @@ function buscar() {
     }
 
     // 1. Intentar búsqueda por código exacto
-    fetch(`http://localhost:8080/producto/buscar?codigo=${encodeURIComponent(termino)}`)
+    fetch(`https://iberpiedra-backend-production-1b67.up.railway.app/producto/buscar?codigo=${encodeURIComponent(termino)}`)
         .then(response => {
             if (response.ok) return response.json();
             throw new Error("No encontrado por código");
@@ -29,7 +29,7 @@ function buscar() {
             }
 
             // Búsqueda por descripción
-            fetch(`http://localhost:8080/producto/buscar-por-nombre?descripcion=${encodeURIComponent(termino)}`)
+            fetch(`https://iberpiedra-backend-production-1b67.up.railway.app/producto/buscar-por-nombre?descripcion=${encodeURIComponent(termino)}`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error("Error en la búsqueda por nombre");
@@ -90,7 +90,7 @@ function toggleDetalle(id) {
             return;
         }
 
-        fetch(`http://localhost:8080/producto/buscar?codigo=${encodeURIComponent(producto.codigo)}`)
+        fetch(`https://iberpiedra-backend-production-1b67.up.railway.app/producto/buscar?codigo=${encodeURIComponent(producto.codigo)}`)
             .then(response => {
                 if (!response.ok) {
                     if (response.status === 404) {
