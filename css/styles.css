@@ -337,3 +337,10 @@ ul {
   padding: 40px;
   background-color: #f2f9f1;
 }
+
+.columna2 input,
+.columna2 label,
+.columna2 button {
+  font-size: 1.2rem; /* incrementando tamaño texto formularios */
+  line-height: 1.4;
+}
