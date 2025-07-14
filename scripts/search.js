@@ -120,7 +120,7 @@ function toggleDetalle(id) {
 // Función para crear el html del detalle del producto
 function renderProductoDetalle(producto) {
     return `
-        <div class="detalle-info">
+        <div class="detalle-producto">
             <p><strong>${producto.descripcion.toUpperCase()}</strong></p>
             <p><strong>ID:</strong> ${producto.id}</p>
             <p><strong>Código:</strong> ${producto.codigo}</p>
