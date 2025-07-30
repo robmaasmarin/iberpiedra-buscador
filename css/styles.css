@@ -241,3 +241,11 @@ footer {
     margin-top: 0;
   }
 }
+
+.detalle-expandido {
+  background-color: #eef9ff; /* cambia a cualquier color que prefieras */
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 8px;
+  border: 1px solid #cde;
+}
