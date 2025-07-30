@@ -33,3 +33,22 @@ function toggleFormulario(formulario) {
     }, 300); // da tiempo a animaciones
   }
 }
+
+function toggleFormulario(nombre) {
+  document.querySelector('.modificar').classList.remove('visible');
+  document.querySelector('.engadir').classList.remove('visible');
+  document.querySelector('.eliminar').classList.remove('visible');
+  document.querySelector('.principal').style.display = 'none';
+
+  const form = document.querySelector(`.${nombre}`);
+  if (form) {
+    form.classList.add('visible');
+  }
+}
+
+function mostrarFormularioBusqueda() {
+  document.querySelector('.modificar').classList.remove('visible');
+  document.querySelector('.engadir').classList.remove('visible');
+  document.querySelector('.eliminar').classList.remove('visible');
+  document.querySelector('.principal').style.display = 'block';
+}
