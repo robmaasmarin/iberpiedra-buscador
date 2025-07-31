@@ -255,7 +255,8 @@ footer {
   font-size: 1.2rem;  
   line-height: 1.5;   /* espaciado entre líneas */
   margin-bottom: 10px; /* separación entre items */
-  margin-top: 1.5%;
+  margin: 2vh 2vh 2vh 2vh;
+  
 }
 /* Hover sobre cada item del listado */
 .producto-listado:hover {
