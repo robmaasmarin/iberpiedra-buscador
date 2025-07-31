@@ -249,3 +249,16 @@ footer {
   margin-top: 8px;
   border: 1px solid #cde;
 }
+
+/* aumentando la fuente del listado */
+.producto-listado {
+  font-size: 1.2rem;  
+  line-height: 1.5;   /* espaciado entre líneas */
+  margin-bottom: 10px; /* separación entre items */
+  margin-top: 1.5%;
+}
+/* Hover sobre cada item del listado */
+.producto-listado:hover {
+    background-color: #c7d0d8; /* Color claro para el hover */
+    cursor: pointer;
+}
