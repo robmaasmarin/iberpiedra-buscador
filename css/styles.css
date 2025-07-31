@@ -262,3 +262,13 @@ footer {
     background-color: #c7d0d8; /* Color claro para el hover */
     cursor: pointer;
 }
+
+/* aumentamos espaciado al hacer click */
+.producto-listado:has(.detalle-producto:not(:empty)) {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #d5eed1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
