@@ -267,8 +267,17 @@ footer {
 .producto-listado:has(.detalle-producto:not(:empty)) {
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: #d5eed1;
+  background-color: #b4ddad;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   transition: all 0.3s ease;
+}
+
+.valor-numero {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 500;
+  color: #111 !important;
+  font-feature-settings: "tnum"; /* números tabulares */
+  letter-spacing: 0.02em;
+  font-size: 1rem;
 }

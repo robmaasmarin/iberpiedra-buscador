@@ -122,11 +122,11 @@ function renderProductoDetalle(producto) {
     return `
         <div class="detalle-producto">
             <p><strong>${producto.descripcion.toUpperCase()}</strong></p>
-            <p><strong>ID:</strong> ${producto.id}</p>
-            <p><strong>Código:</strong> ${producto.codigo}</p>
-            <p><strong>Familia:</strong> ${producto.familia}</p>
-            <p><strong>PVP:</strong> ${producto.pvp} €</p>
-            <p><strong>PVP con IVA:</strong> ${producto.pvp_con_iva} €</p>
+            <p><strong>ID:</strong> <span class="valor-numero">${producto.id}</span></p>
+            <p><strong>Código:</strong> <span class="valor-numero">${producto.codigo}</span></p>
+            <p><strong>Familia:</strong> <span class="valor-numero">${producto.familia}</span></p>
+            <p><strong>PVP:</strong> <span class="valor-numero">${producto.pvp} €</span></p>
+            <p><strong>PVP con IVA:</strong> <span class="valor-numero">${producto.pvp_con_iva} €</span></p>
         </div>
     `;
 }
