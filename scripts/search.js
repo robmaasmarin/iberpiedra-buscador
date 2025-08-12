@@ -45,7 +45,7 @@ function buscar() {
                         html += `
                             <li class="producto-listado">
                             <span class="clickable" onclick="toggleDetalle(${producto.id})" style="cursor:pointer;">
-                                <strong>${producto.descripcion}</strong> - ${producto.codigo} - ${producto.pvp} €
+                                <strong>${producto.descripcion}</strong> - ${producto.codigo} - <strong>${producto.pvp_con_iva} €</strong>
                             </span>
                             <div id="detalle-${producto.id}" class="detalle-producto" style="display: none;"></div>
                             </li>

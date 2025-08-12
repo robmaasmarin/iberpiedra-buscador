@@ -252,7 +252,8 @@ footer {
 
 /* aumentando la fuente del listado */
 .producto-listado {
-  font-size: 1.2rem;  
+  font-size: 1.2rem; 
+   
   line-height: 1.5;   /* espaciado entre líneas */
   margin-bottom: 10px; /* separación entre items */
   margin: 2vh 2vh 2vh 2vh;
