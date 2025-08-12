@@ -6,7 +6,7 @@ function eliminarProducto() {
         return;
     }
 
-    fetch(`https://iberpiedra.alwaysdata.net/producto/buscar-por-id?id=${encodeURIComponent(id)}`)
+    fetch(`https://iberpiedra-backend.onrender.com/producto/buscar-por-id?id=${encodeURIComponent(id)}`)
         .then(res => {
             if (!res.ok) throw new Error("Producto no encontrado");
             return res.json();
@@ -22,7 +22,7 @@ function eliminarProducto() {
                 `¿Estás seguro de que quieres ELIMINAR este producto?`;
 
             if (confirm(mensaje)) {
-                fetch(`https://iberpiedra.alwaysdata.net/producto/eliminar-por-id?id=${encodeURIComponent(id)}`, {
+                fetch(`https://iberpiedra-backend.onrender.com/producto/eliminar-por-id?id=${encodeURIComponent(id)}`, {
                     method: 'DELETE'
                 })
                 .then(res => {

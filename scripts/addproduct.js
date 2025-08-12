@@ -28,7 +28,7 @@ function agregarProducto() {
         pvp_con_iva
     };
 
-    fetch("https://iberpiedra.alwaysdata.net/producto/producto", {
+    fetch("https://iberpiedra-backend.onrender.com/producto/producto", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
