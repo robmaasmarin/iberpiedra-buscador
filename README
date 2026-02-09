@@ -1,0 +1,59 @@
+# 🪨 Iberpiedra Buscador
+
+**Iberpiedra Buscador** is a full-stack web application developed for internal use in a family-owned company.  
+It allows users to **search, add, update, and delete stone products** through a simple web interface connected to a REST API.
+
+This project was built as a **real-world portfolio project**, representing my **first complete application developed independently**, covering frontend, backend, database design, deployment, and production configuration.
+
+---
+
+## 🌐 Live Demo
+
+- **Frontend (GitHub Pages):**  
+  https://robmaasmarin.github.io/iberpiedra-buscador/
+
+- **Backend API (Render):**  
+  https://iberpiedra-backend.onrender.com
+
+---
+
+## ✨ Features
+
+- 🔍 Search products by code or name  
+- 📋 View product details  
+- ➕ Add new products  
+- ✏️ Update product prices  
+- ❌ Delete products  
+- 🌍 Frontend–backend communication via REST API  
+- 🔓 Open API (no authentication – internal use)
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- HTML5  
+- CSS3  
+- Vanilla JavaScript  
+- GitHub Pages (deployment)
+
+### Backend
+- Java 17  
+- Spring Boot  
+- Spring Data JPA  
+- REST API  
+- Maven  
+
+### Database
+- PostgreSQL (production – Render)  
+- MySQL (local development)  
+- H2 (testing)
+
+### Deployment
+- Render (backend + database)  
+- GitHub Pages (frontend)
+
+---
+
+## 🧩 Architecture Overview
+
