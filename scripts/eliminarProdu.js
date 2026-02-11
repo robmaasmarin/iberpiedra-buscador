@@ -1,16 +1,19 @@
 function eliminarProducto() {
     const id = document.getElementById("miproducto").value.trim();
-
+    /* obtenemos valor del producto y eliminamos espacios innecesarios*/
+    /* comprobamos que el campo no esté vacío y que sea un número*/
     if (!id || isNaN(id)) {
         alert("Por favor, introduce un ID válido.");
         return;
     }
-
+    /* llamada al backend: buscar el producto antes de eliminarlo */
     fetch(`https://iberpiedra-backend.onrender.com/producto/buscar-por-id?id=${encodeURIComponent(id)}`)
+    /* si no es 200 la respuesta lanzamos error*/
         .then(res => {
             if (!res.ok) throw new Error("Producto no encontrado");
             return res.json();
         })
+        /* en caso de ser correcta convetimos la respuesta a JSON */
         .then(producto => {
             const mensaje = `Has seleccionado el producto:\n\n` +
                 `ID: ${producto.id}\n` +

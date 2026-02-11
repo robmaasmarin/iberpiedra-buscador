@@ -34,7 +34,7 @@ function buscar() {
                     if (!response.ok) {
                         throw new Error("Error en la búsqueda por nombre");
                     }
-                    return response.json(); // Muy importante devolver el JSON aquí
+                    return response.json(); // devolver json
                 })
                 .then(productos => {
                     productosCache = {}; // limpiamos cache
@@ -94,7 +94,7 @@ function toggleDetalle(id) {
             .then(response => {
                 if (!response.ok) {
                     if (response.status === 404) {
-                        // Producto no encontrado, pero no lanzamos error para evitar que salga en consola
+                        // producto no encontrado, pero no lanzamos error para evitar que salga en consola
                         return null;
                     }
                     throw new Error("Error inesperado al buscar producto");
@@ -110,7 +110,7 @@ function toggleDetalle(id) {
                 }
             })
             .catch(error => {
-                // Sólo errores inesperados llegan aquí
+                // Sólo los errores inesperados llegan aquí
                 detalleDiv.innerHTML = `<p style="color:red;">${error.message}</p>`;
             });
     }

@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-
+/* contenedor del layout principal*/
 .containercolumnas {
   display: flex;
   width: 100%;
@@ -26,7 +26,7 @@ body {
   flex: 1;
 }
 
-/* Columna 1 (menú lateral) */
+/* Columna 1 (menú lateral) - menú fijo al hacer scroll */
 .columna1 {
   width: 15%;
   display: flex;
@@ -36,7 +36,7 @@ body {
   position: sticky;
   top: 0;
   background-color: #f2f9f1;
-  z-index: 100;
+  z-index: 100;/* evita que quede tapado*/
 }
 
 /* Columna 2 (contenido) */
@@ -45,10 +45,10 @@ body {
   background-color: #fff;
   padding: 0 40px;
   border-right: 1px solid #eee;
-  transition: margin-top 1.5s ease;
+  transition: margin-top 1.5s ease;/* transición suave al abrir/cerrar menú */
   margin-top: 0;
 }
-
+/* menú hamburguesa */
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -77,7 +77,7 @@ body {
   transform: rotate(-45deg);
   opacity: 0;
 }
-
+/* transformación a X */
 #toggle:checked + .columna1 .hamburger span:nth-child(1),
 #toggle:checked + .columna1 .hamburger span:nth-child(3) {
   opacity: 0;
@@ -97,7 +97,7 @@ body {
   flex-direction: column;
   gap: 10px;
 }
-
+/* solo aparecen cuando el menú está abierto */
 #toggle:checked + .columna1 .botones {
   display: flex;
   margin-top: 10px;
@@ -127,7 +127,7 @@ body {
   color: #e0e0e0;
 }
 
-/* Formularios */
+/* Formularios ocultos por defecto */
 .modificar,
 .engadir,
 .eliminar {
@@ -167,7 +167,7 @@ body {
   flex-direction: column;
   gap: 12px;
 }
-
+/* barra de búsqueda y campos */
 .miinput,
 .miprod,
 .mipre,
@@ -186,7 +186,7 @@ label {
   margin-top: 20px;
   font-weight: bold;
 }
-
+/* logo fijo */
 .logo-sticky {
   position: sticky;
   top: 0;
@@ -243,7 +243,7 @@ footer {
 }
 
 .detalle-expandido {
-  background-color: #eef9ff; /* cambia a cualquier color que prefieras */
+  background-color: #eef9ff; 
   padding: 16px;
   border-radius: 8px;
   margin-top: 8px;
@@ -261,7 +261,7 @@ footer {
 }
 /* Hover sobre cada item del listado */
 .producto-listado:hover {
-    background-color: #c7d0d8; /* Color claro para el hover */
+    background-color: #c7d0d8; /* color para el hover */
     cursor: pointer;
 }
 

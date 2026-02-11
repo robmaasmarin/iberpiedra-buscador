@@ -4,9 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function updatePrice() {
+  /* obtenemos el ID del producto y nuevo precio*/
   const id = document.querySelector(".miprod").value.trim();
+  /* conversión a decimal */
   const nuevoPvp = parseFloat(document.querySelector(".mipre").value.trim());
-
+/* validaciones */
   if (!id) {
     alert("Por favor, introduce el ID del producto.");
     return;
@@ -16,12 +18,13 @@ function updatePrice() {
     alert("Por favor, introduce un precio válido.");
     return;
   }
-
+  /* llamada a backend: obtener datos del producto */
   fetch(`https://iberpiedra-backend.onrender.com/producto/buscar-por-id?id=${encodeURIComponent(id)}`)
-    .then(res => {
+        .then(res => {
       if (!res.ok) throw new Error("Producto no encontrado");
       return res.json();
     })
+    /* si la respuesta es ok - conversión a json */
     .then(producto => {
       const mensaje = `Has seleccionado el producto:\n` +
         `Nombre: ${producto.descripcion}\n` +

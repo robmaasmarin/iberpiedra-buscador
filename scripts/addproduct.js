@@ -1,9 +1,10 @@
 function agregarProducto() {
+    /* obtenemos valores del formulario */
     const nombre = document.getElementById("pname").value.trim();
     const codigo = document.getElementById("pcod").value.trim();
     const familia = document.getElementById("pfam").value.trim();
     const pvp = parseFloat(document.getElementById("pprecio").value.trim());
-
+    /* validación de campos  (completos y formatos ok) */
     if (!nombre || !codigo || !familia || isNaN(pvp)) {
         alert("Por favor, completa todos los campos correctamente.");
         return;
@@ -19,7 +20,7 @@ function agregarProducto() {
         `Precio con IVA: ${pvp_con_iva} €`;
 
     if (!confirm(mensajeConfirmacion)) return;
-
+    /* construcción del objeto a enviar */
     const nuevoProducto = {
         descripcion: nombre,
         codigo,
@@ -27,7 +28,7 @@ function agregarProducto() {
         pvp,
         pvp_con_iva
     };
-
+    /* envío a backend */
     fetch("https://iberpiedra-backend.onrender.com/producto/producto", {
         method: "POST",
         headers: {

@@ -7,16 +7,16 @@
   <title>IBERPIEDRA - CATÁLOGO</title>
   <link rel="icon" href="./img/icon.png" />
 
-  <!-- Fuentes -->
+  <!-- fuentes externas -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet" />
 
-  <!-- Estilos -->
+  <!-- hoja de estilos -->
   <link rel="stylesheet" href="./css/styles.css" />
 
-  <!-- Scripts -->
+  <!-- scripts -->
   <script src="./scripts/buttonsandforms.js"></script>
   <script src="./scripts/search.js"></script>
   <script src="./scripts/prueba.js"></script>
@@ -26,9 +26,11 @@
 </head>
 
 <body>
+  <!-- estructura principal -->
   <div class="containercolumnas">
     <input type="checkbox" id="toggle" hidden />
     <div class="columna1">
+      <!-- icono hamburguesa -->
       <label for="toggle" class="hamburger">
         <span></span>
         <span></span>
@@ -41,7 +43,7 @@
         <button class="buttonDel" onclick="toggleFormulario('eliminar')">ELIMINAR PRODUCTO</button>
       </div>
     </div>
-
+    <!-- logo fijo -->
     <div class="columna2">
       <div class="logo-sticky">
         <img class="logo" src="./img/logo.png" alt="" />
@@ -55,13 +57,13 @@
         </div>
         <div id="mostrarProducto" class="mostrarProducto"></div>
       </div>
-
+      <!-- formulaario modificar precio -->
       <div class="modificar">
         <input class="miprod" id="inputIdProducto" type="text" placeholder="Código de producto..." />
         <input class="mipre" id="inputNuevoPrecio" type="text" placeholder="Nuevo Precio sin IVA..." />
         <button class="cambiar" id="btnCambiarPrecio">APLICAR CAMBIO</button>
       </div>
-
+      <!-- formulario añadir producto -->
       <div class="engadir">
         <form onsubmit="return false;">
           <label for="pname">NOMBRE PRODUCTO</label>
@@ -72,12 +74,14 @@
           <input class="inputadd" id="pfam" type="text" placeholder="Familia..." /><br /><br>
           <label for="pprecio">PRECIO (SIN IVA)</label>
           <input class="inputadd" id="pprecio" type="text" />
+          <!-- llamada a la función que hace el POST-->
           <button class="cambiar" onclick="agregarProducto()">AÑADIR PRODUCTO</button>
         </form>
       </div>
-
+      <!-- formulario eliminar producto -->
       <div class="eliminar" id="eliminar">
         <input class="inputadd" type="text" id="miproducto" placeholder="Código de producto..." />
+        <!-- llamada a la función que hace el DELETE-->
         <button class="cambiar" id="btnDelete" onclick="eliminarProducto()">ELIMINAR PRODUCTO</button>
       </div>
     </div>
@@ -86,6 +90,7 @@
   <footer class="mifooter" id="mifooter">
     <div class="columna1footer"></div>
     <div class="columna2footer">
+      <!-- botón para volver arriba -->
       <img src="./img/angles-up-solid.png" alt="" style="height: 45px;" class="footer-image" onclick="scrollToTop()" />
     </div>
   </footer>
@@ -100,6 +105,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
+  <!-- al verrar el menú lateral se vuelve a la vista principal-->
   <script>
   const toggleCheckbox = document.getElementById('toggle');
 
