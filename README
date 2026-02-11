@@ -1,4 +1,4 @@
-# 🪨 Iberpiedra Buscador
+# 🧱 Iberpiedra Buscador
 
 Iberpiedra Buscador is a full-stack web application developed for internal use in a family-owned company. The application allows managing a stone products catalog through a web interface, providing full CRUD functionality.
 
@@ -8,11 +8,11 @@ This project is part of my personal portfolio and represents my **first complete
 
 ## 🌐 Live Demo
 
-- **Frontend (GitHub Pages):**  
-  [https://robmaasmarin.github.io/iberpiedra-buscador/](https://robmaasmarin.github.io/iberpiedra-buscador/)
+**Frontend (GitHub Pages):**  
+https://robmaasmarin.github.io/iberpiedra-buscador/
 
-- **Backend API (Render):**  
-  [https://iberpiedra-backend.onrender.com](https://iberpiedra-backend.onrender.com)
+**Backend API (Render):**  
+https://iberpiedra-backend.onrender.com
 
 ---
 
@@ -55,7 +55,10 @@ This project is part of my personal portfolio and represents my **first complete
 
 ## 🧩 Architecture Overview
 
-The application follows a classic client–server architecture:
+![Architecture Diagram](screenshots/arquitectura.png)
+
+
+The application follows a classic client–server architecture with full separation between frontend, backend, and database layers.
 ```
 Frontend (HTML / CSS / JavaScript)
     ↓
@@ -87,13 +90,13 @@ com.empresa.backend_productos
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET    | `/producto` | API status message |
-| GET    | `/producto/buscar?codigo=` | Search product by code |
-| GET    | `/producto/buscar-por-nombre?descripcion=` | Search products by name |
-| GET    | `/producto/buscar-por-id?id=` | Get product by ID |
-| POST   | `/producto/producto` | Create a new product |
-| PUT    | `/producto/id/{id}` | Update product price |
-| DELETE | `/producto/eliminar-por-id?id=` | Delete product |
+| `GET` | `/producto` | API status message |
+| `GET` | `/producto/buscar?codigo=` | Search product by code |
+| `GET` | `/producto/buscar-por-nombre?descripcion=` | Search products by name |
+| `GET` | `/producto/buscar-por-id?id=` | Get product by ID |
+| `POST` | `/producto/producto` | Create a new product |
+| `PUT` | `/producto/id/{id}` | Update product price |
+| `DELETE` | `/producto/eliminar-por-id?id=` | Delete product |
 
 ---
 
@@ -117,19 +120,19 @@ com.empresa.backend_productos
 ![Product Search](screenshots/search.png)
 
 ### Add Product Form
-![Add Product](screenshots/add-product.png)
+![Add Product](screenshots/add.png)
 
 ### Update Price Form
-![Update Price](screenshots/update-price.png)
+![Update Price](screenshots/modify.png)
 
 ### Delete Product Form
-![Delete Product](screenshots/delete-product.png)
+![Delete Product](screenshots/delete.png)
 
 ---
 
 ## 🔐 Security
 
-This application does not implement authentication or authorization. It is intended for internal company use, with access controlled externally.
+> **Note:** This application does not implement authentication or authorization. It is intended for internal company use, with access controlled externally.
 
 ---
 
@@ -140,11 +143,12 @@ This application does not implement authentication or authorization. It is inten
 - Working with Spring Data JPA and relational databases
 - Migrating from MySQL to PostgreSQL for production
 - Configuring CORS for frontend–backend communication
+- **Exploring and comparing different hosting platforms** (Render, AlwaysData) and understanding their free tier limitations
+- Managing database migrations across different hosting providers
 - Deploying backend services and databases on Render
-- Deploying a static frontend on GitHub Pages
 - Structuring and delivering a real-world full-stack project independently
 
-**This was my first fully independent project involving frontend, backend, database, and deployment.**
+> **This was my first fully independent project involving frontend, backend, database, and deployment.**
 
 ---
 
@@ -154,15 +158,13 @@ This application does not implement authentication or authorization. It is inten
 - Input validation and improved error handling
 - Pagination and advanced search filters
 - Product category management
-- API documentation with Swagger/OpenAPI
-- Unit and integration testing
 - UI/UX refinements with modern framework (React/Vue)
 
 ---
 
 ## 👨‍💻 Author
 
-Developed by **Roberto Abelleira Pesqueira**  
+**Developed by Roberto Abelleira Pesqueira**  
 Portfolio project demonstrating full-stack development skills.
 
 ---
