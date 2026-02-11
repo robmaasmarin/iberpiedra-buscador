@@ -43,13 +43,14 @@ https://iberpiedra-backend.onrender.com
 - **Build Tool:** Maven
 
 ### Database
-- **Production:** PostgreSQL (Render)
-- **Development:** MySQL
-- **Testing:** H2
+- **Production:** PostgreSQL (Supabase)
+- **Local Development:** MySQL (MySQL Workbench)
 
 ### Deployment
-- **Backend & Database:** Render
 - **Frontend:** GitHub Pages
+- **Backend:** Render
+- **Database:** Supabase (PostgreSQL)
+- **Previous platforms explored:** Railway, AlwaysData
 
 ---
 
@@ -143,9 +144,11 @@ com.empresa.backend_productos
 - Working with Spring Data JPA and relational databases
 - Migrating from MySQL to PostgreSQL for production
 - Configuring CORS for frontend–backend communication
-- **Exploring and comparing different hosting platforms** (Render, AlwaysData) and understanding their free tier limitations
-- Managing database migrations across different hosting providers
-- Deploying backend services and databases on Render
+- **Exploring and comparing multiple hosting platforms:** Deployed the application across Railway, AlwaysData, Render (backend), Supabase (database), and GitHub Pages (frontend), learning about their features, pricing models, and free tier limitations
+- Managing application migrations and database transfers between different hosting providers
+- Deploying static frontends on GitHub Pages
+- Deploying backend services on Render
+- Managing PostgreSQL databases on Supabase
 - Structuring and delivering a real-world full-stack project independently
 
 > **This was my first fully independent project involving frontend, backend, database, and deployment.**
