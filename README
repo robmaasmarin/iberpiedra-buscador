@@ -1,7 +1,6 @@
 # 🪨 Iberpiedra Buscador
 
-Iberpiedra Buscador is a full-stack web application developed for internal use in a family-owned company.  
-The application allows managing a stone products catalog through a web interface, providing full CRUD functionality.
+Iberpiedra Buscador is a full-stack web application developed for internal use in a family-owned company. The application allows managing a stone products catalog through a web interface, providing full CRUD functionality.
 
 This project is part of my personal portfolio and represents my **first complete independently developed application**, covering frontend development, backend API design, database integration, deployment, and production configuration.
 
@@ -10,10 +9,10 @@ This project is part of my personal portfolio and represents my **first complete
 ## 🌐 Live Demo
 
 - **Frontend (GitHub Pages):**  
-  https://robmaasmarin.github.io/iberpiedra-buscador/
+  [https://robmaasmarin.github.io/iberpiedra-buscador/](https://robmaasmarin.github.io/iberpiedra-buscador/)
 
 - **Backend API (Render):**  
-  https://iberpiedra-backend.onrender.com
+  [https://iberpiedra-backend.onrender.com](https://iberpiedra-backend.onrender.com)
 
 ---
 
@@ -33,43 +32,43 @@ This project is part of my personal portfolio and represents my **first complete
 ## 🛠️ Tech Stack
 
 ### Frontend
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- GitHub Pages
+- **Languages:** HTML5, CSS3, Vanilla JavaScript
+- **Deployment:** GitHub Pages
 
 ### Backend
-- Java 17
-- Spring Boot
-- Spring Data JPA
-- REST API
-- Maven
+- **Language:** Java 17
+- **Framework:** Spring Boot
+- **Data Access:** Spring Data JPA
+- **API:** REST
+- **Build Tool:** Maven
 
 ### Database
-- PostgreSQL (production – Render)
-- MySQL (local development)
-- H2 (testing)
+- **Production:** PostgreSQL (Render)
+- **Development:** MySQL
+- **Testing:** H2
 
 ### Deployment
-- Render (backend and database)
-- GitHub Pages (frontend)
+- **Backend & Database:** Render
+- **Frontend:** GitHub Pages
 
 ---
 
 ## 🧩 Architecture Overview
 
 The application follows a classic client–server architecture:
-
-Frontend (HTML / CSS / JavaScript)  
-→ REST API (Spring Boot)  
-→ PostgreSQL Database
+```
+Frontend (HTML / CSS / JavaScript)
+    ↓
+REST API (Spring Boot)
+    ↓
+PostgreSQL Database
+```
 
 The frontend is fully decoupled and communicates with the backend via HTTP requests.
 
 ---
 
 ## 🗂️ Backend Structure
-
 ```text
 com.empresa.backend_productos
 ├── controller
@@ -82,11 +81,12 @@ com.empresa.backend_productos
 └── BackendProductosApplication.java
 ```
 
+---
 
 ## 🔗 API Endpoints
 
 | Method | Endpoint | Description |
-|--------|---------|-------------|
+|--------|----------|-------------|
 | GET    | `/producto` | API status message |
 | GET    | `/producto/buscar?codigo=` | Search product by code |
 | GET    | `/producto/buscar-por-nombre?descripcion=` | Search products by name |
@@ -95,71 +95,78 @@ com.empresa.backend_productos
 | PUT    | `/producto/id/{id}` | Update product price |
 | DELETE | `/producto/eliminar-por-id?id=` | Delete product |
 
+---
+
+## 🗃️ Product Model
+```java
+{
+  "id": Long,
+  "codigo": String (unique),
+  "descripcion": String,
+  "familia": String,
+  "pvp": Double (price without VAT),
+  "pvp_con_iva": Double (price with VAT)
+}
+```
 
 ---
 
-
-## 🗃️ Product model
-- id (Long)
-- codigo (String, unique)
-- descripcion (String)
-- familia (String)
-- pvp (price without VAT)
-- pvp_con_iva
-
 ## 📸 Screenshots
 
-Product Search
+### Product Search
+![Product Search](screenshots/search.png)
 
-Add Product Form
+### Add Product Form
+![Add Product](screenshots/add-product.png)
 
-Update Price Form
+### Update Price Form
+![Update Price](screenshots/update-price.png)
 
-Delete Product Form
+### Delete Product Form
+![Delete Product](screenshots/delete-product.png)
 
-Replace these bullets with actual screenshots if desired.
+---
 
 ## 🔐 Security
 
-This application does not implement authentication or authorization.
-It is intended for internal company use, with access controlled externally.
+This application does not implement authentication or authorization. It is intended for internal company use, with access controlled externally.
+
+---
 
 ## 🚀 What I Learned
 
-Building a complete CRUD application from scratch
+- Building a complete CRUD application from scratch
+- Developing REST APIs with Spring Boot
+- Working with Spring Data JPA and relational databases
+- Migrating from MySQL to PostgreSQL for production
+- Configuring CORS for frontend–backend communication
+- Deploying backend services and databases on Render
+- Deploying a static frontend on GitHub Pages
+- Structuring and delivering a real-world full-stack project independently
 
-Developing REST APIs with Spring Boot
+**This was my first fully independent project involving frontend, backend, database, and deployment.**
 
-Working with Spring Data JPA and relational databases
-
-Migrating from MySQL to PostgreSQL for production
-
-Configuring CORS for frontend–backend communication
-
-Deploying backend services and databases on Render
-
-Deploying a static frontend on GitHub Pages
-
-Structuring and delivering a real-world full-stack project independently
-
-This was my first fully independent project involving frontend, backend, database, and deployment.
+---
 
 ## 🔮 Possible Improvements
 
 - Authentication and role-based access control
-
 - Input validation and improved error handling
-
-- Pagination and advanced search
-
+- Pagination and advanced search filters
 - Product category management
-
-- API documentation with Swagger / OpenAPI
-
+- API documentation with Swagger/OpenAPI
 - Unit and integration testing
+- UI/UX refinements with modern framework (React/Vue)
 
-- UI/UX refinements
+---
 
 ## 👨‍💻 Author
 
-Developed by **Roberto Abelleira Pesqueira**
+Developed by **Roberto Abelleira Pesqueira**  
+Portfolio project demonstrating full-stack development skills.
+
+---
+
+## 📄 License
+
+This project is for academic and portfolio purposes.
