@@ -1,9 +1,9 @@
 # 🪨 Iberpiedra Buscador
 
-**Iberpiedra Buscador** is a full-stack web application developed for internal use in a family-owned company.  
-It allows users to **search, add, update, and delete stone products** through a simple web interface connected to a REST API.
+Iberpiedra Buscador is a full-stack web application developed for internal use in a family-owned company.  
+The application allows managing a stone products catalog through a web interface, providing full CRUD functionality.
 
-This project was built as a **real-world portfolio project**, representing my **first complete application developed independently**, covering frontend, backend, database design, deployment, and production configuration.
+This project is part of my personal portfolio and represents my **first complete independently developed application**, covering frontend development, backend API design, database integration, deployment, and production configuration.
 
 ---
 
@@ -19,41 +19,147 @@ This project was built as a **real-world portfolio project**, representing my **
 
 ## ✨ Features
 
-- 🔍 Search products by code or name  
-- 📋 View product details  
-- ➕ Add new products  
-- ✏️ Update product prices  
-- ❌ Delete products  
-- 🌍 Frontend–backend communication via REST API  
-- 🔓 Open API (no authentication – internal use)
+- 🔍 Search products by code
+- 🔎 Search products by name
+- 📋 View product details
+- ➕ Add new products
+- ✏️ Update product prices
+- ❌ Delete products
+- 🌍 Frontend–backend communication via REST API
+- 🔓 No authentication (internal company use)
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- HTML5  
-- CSS3  
-- Vanilla JavaScript  
-- GitHub Pages (deployment)
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- GitHub Pages
 
 ### Backend
-- Java 17  
-- Spring Boot  
-- Spring Data JPA  
-- REST API  
-- Maven  
+- Java 17
+- Spring Boot
+- Spring Data JPA
+- REST API
+- Maven
 
 ### Database
-- PostgreSQL (production – Render)  
-- MySQL (local development)  
+- PostgreSQL (production – Render)
+- MySQL (local development)
 - H2 (testing)
 
 ### Deployment
-- Render (backend + database)  
+- Render (backend and database)
 - GitHub Pages (frontend)
 
 ---
 
 ## 🧩 Architecture Overview
 
+The application follows a classic client–server architecture:
+
+Frontend (HTML / CSS / JavaScript)  
+→ REST API (Spring Boot)  
+→ PostgreSQL Database
+
+The frontend is fully decoupled and communicates with the backend via HTTP requests.
+
+---
+
+## 🗂️ Backend Structure
+
+```text
+com.empresa.backend_productos
+├── controller
+│   └── ProductoController.java
+├── modelo
+│   └── Producto.java
+├── repository
+│   └── ProductoRepository.java
+├── CorsConfig.java
+└── BackendProductosApplication.java
+```
+
+
+## 🔗 API Endpoints
+
+| Method | Endpoint | Description |
+|--------|---------|-------------|
+| GET    | `/producto` | API status message |
+| GET    | `/producto/buscar?codigo=` | Search product by code |
+| GET    | `/producto/buscar-por-nombre?descripcion=` | Search products by name |
+| GET    | `/producto/buscar-por-id?id=` | Get product by ID |
+| POST   | `/producto/producto` | Create a new product |
+| PUT    | `/producto/id/{id}` | Update product price |
+| DELETE | `/producto/eliminar-por-id?id=` | Delete product |
+
+
+---
+
+
+## 🗃️ Product model
+- id (Long)
+- codigo (String, unique)
+- descripcion (String)
+- familia (String)
+- pvp (price without VAT)
+- pvp_con_iva
+
+## 📸 Screenshots
+
+Product Search
+
+Add Product Form
+
+Update Price Form
+
+Delete Product Form
+
+Replace these bullets with actual screenshots if desired.
+
+## 🔐 Security
+
+This application does not implement authentication or authorization.
+It is intended for internal company use, with access controlled externally.
+
+## 🚀 What I Learned
+
+Building a complete CRUD application from scratch
+
+Developing REST APIs with Spring Boot
+
+Working with Spring Data JPA and relational databases
+
+Migrating from MySQL to PostgreSQL for production
+
+Configuring CORS for frontend–backend communication
+
+Deploying backend services and databases on Render
+
+Deploying a static frontend on GitHub Pages
+
+Structuring and delivering a real-world full-stack project independently
+
+This was my first fully independent project involving frontend, backend, database, and deployment.
+
+## 🔮 Possible Improvements
+
+- Authentication and role-based access control
+
+- Input validation and improved error handling
+
+- Pagination and advanced search
+
+- Product category management
+
+- API documentation with Swagger / OpenAPI
+
+- Unit and integration testing
+
+- UI/UX refinements
+
+## 👨‍💻 Author
+
+Developed by **Roberto Abelleira Pesqueira**
